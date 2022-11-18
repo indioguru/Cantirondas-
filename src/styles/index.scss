@@ -1,0 +1,25 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+$morado: #8554fa;
+$verde-azul: #01b4bb;
+$rojo: #fa5456;
+$naranja: #fa8825;
+$verde: #2cc821;
+$amarillo: #f5d51e;
+$azul: #0184bb;
+
+.noScroll {
+  overflow: hidden;
+}
+
+@import "./components//Home/home";
+@import "./components//Menu/MenuMobile.scss";
+@import "./components//NuestrasCanciones/nuestrasCanciones";
+@import "./components/NuestrasCanciones/nuestrasCancionesLista";
+@import "./components/Footer/footer";
+@import "./components/Descargables/descargables";
+@import "./components/Descargables/descargablesLista";

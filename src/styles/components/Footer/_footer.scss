@@ -1,0 +1,25 @@
+.footer {
+  background-color: $verde-azul;
+  &_container {
+    padding: 20px;
+    &_items {
+      display: flex;
+      justify-content: center;
+    }
+    &_items img {
+      width: 50px;
+      margin: 10px;
+    }
+
+    &_info{
+        margin-top: 30px;
+        margin-bottom: 100px;
+    }
+
+    &_info h1 {
+      padding: 10px 40px 10px 10px;
+      font-size: 25px;
+      color: white;
+    }
+  }
+}

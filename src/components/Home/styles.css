@@ -1,0 +1,57 @@
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  border: 1px white solid;
+  opacity: unset;
+  background: unset;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: white;
+  opacity: 1;
+}
+
+.swiper-pagination {
+  position: relative;
+  text-align: center;
+  transition: 300ms opacity;
+  transform: translate3d(0, 0, 0);
+  top: -450px;
+  z-index: 15;
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  content: "next";
+  background-image: url("assets/flecha2.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  content: "prev";
+  background-image: url("assets/flecha1.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 70px;
+  color: transparent;
+}
+
+@media (max-width: 600px) {
+  .swiper-button-prev:after,
+  .swiper-rtl .swiper-button-next:after {
+    background-image: unset;
+  }
+
+  .swiper-button-next:after,
+  .swiper-rtl .swiper-button-prev:after {
+    background-image: unset;
+  }
+}

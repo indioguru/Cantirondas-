@@ -1,0 +1,72 @@
+.descargablesLista {
+  background-color: $verde-azul;
+  background-image: url("/public//assets/texturas/4.png");
+  background-size: 100%;
+  &_container {
+    padding: 20px;
+
+    &_arrow {
+      position: fixed;
+      top: 0;
+      margin-top: 60px;
+      z-index: 20;
+    }
+
+    &_arrow img {
+      width: 50px;
+    }
+    &_logo {
+      text-align: end;
+    }
+
+    &_logo img {
+      width: 70%;
+    }
+
+    &_title {
+      color: white;
+      padding: 40px;
+    }
+
+    &_buttonFichas {
+      text-align: center;
+      margin: 40px 0px;
+      position: relative;
+      z-index: 1;
+    }
+
+    &_buttonFichas button {
+      color: white;
+      border-radius: 40px;
+      border: 2px white solid;
+      background-color: $rojo;
+      padding: 10px 40px;
+      font-size: 20px;
+      position: relative;
+    }
+
+    &_buttonFichas button::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: $naranja;
+      border-radius: 40px;
+      border: 2px white solid;
+      position: absolute;
+      z-index: -1;
+      top: 5px;
+      left: 5px;
+    }
+
+    &_info {
+      .listDownload h1 {
+        color: white;
+        padding: 10px;
+        font-size: 25px;
+        margin-top: 10px;
+        margin-bottom: 00px;
+      }
+    }
+  }
+}

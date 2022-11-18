@@ -1,0 +1,152 @@
+&_songs {
+  background-color: $rojo;
+  &_container {
+    padding: 20px;
+
+    @media (min-width: 600px) {
+      &_destok {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-bottom: 150px;
+        &_two {
+          width: 50%;
+        }
+
+        &_one {
+          width: 50%;
+          .contetButtonPlaylistDestok {
+            text-align: center;
+          }
+
+          .contetButtonPlaylistDestok button {
+            background-color: $morado;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 40px;
+            border: 1px white solid;
+            font-size: 20px;
+            margin-top: 40px;
+          }
+        }
+      }
+    }
+    & h1 {
+      text-align: center;
+      color: white;
+    }
+
+    .contetButtonPlaylist {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .contetButtonPlaylist button {
+      background-color: $morado;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 40px;
+      border: 1px white solid;
+      font-size: 20px;
+      margin-bottom: 150px;
+    }
+
+    .containerCard:nth-child(3n + 1) {
+      .card::after {
+        background-color: $verde-azul;
+        top: 16px;
+        right: 0px;
+      }
+
+      .card {
+        background-color: $morado;
+      }
+    }
+
+    .containerCard:nth-child(3n + 2) {
+      .card::after {
+        background-color: $rojo;
+        top: 16px;
+        left: 0px;
+      }
+
+      .card {
+        background-color: $naranja;
+      }
+    }
+
+    .containerCard:nth-child(3n + 3) {
+      .card::after {
+        background-color: $amarillo;
+        top: 16px;
+        left: 0px;
+      }
+
+      .card {
+        background-color: $rojo;
+      }
+    }
+
+    .contentCard {
+      width: 100%;
+      padding: 10px;
+      position: relative;
+      margin-top: 30px;
+      z-index: 2;
+      max-width: 350px;
+      margin: 0 auto;
+      margin-top: 60px;
+      .card::after {
+        content: "";
+        display: block;
+        width: 90%;
+        border-radius: 50px;
+        border: 2px white solid;
+        height: 95%;
+        position: absolute;
+        z-index: -1;
+      }
+
+      .card {
+        border-radius: 50px;
+        border: 2px white solid;
+        height: 400px;
+
+        .contentIcons {
+          text-align: center;
+          margin: 10px;
+        }
+
+        .contentIcons img {
+          width: 50px;
+          margin: 0px 10px;
+        }
+        .contentImg {
+          text-align: center;
+          padding: 20px;
+        }
+        .contentImg img {
+          width: 100%;
+          object-fit: cover;
+          border: 2px white solid;
+          border-top-right-radius: 40px;
+          border-bottom-right-radius: 40px;
+          border-top-left-radius: 40px;
+        }
+
+        .featuredSongs h2 {
+          text-align: center;
+          color: white;
+        }
+
+        .featuredSongs p {
+          color: white;
+          word-wrap: break-word;
+          padding: 10px 20px;
+        }
+      }
+    }
+  }
+}

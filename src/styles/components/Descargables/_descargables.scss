@@ -1,0 +1,212 @@
+.descargables {
+  background-color: $rojo;
+
+  &_container {
+    padding: 20px;
+
+    &_arrow {
+      position: fixed;
+      top: 0;
+      margin-top: 60px;
+      z-index: 20;
+    }
+
+    &_arrow img {
+      width: 50px;
+    }
+    &_logo {
+      text-align: end;
+    }
+
+    &_logo img {
+      width: 70%;
+    }
+
+    &_info h1 {
+      color: white;
+      padding: 20px;
+      font-size: 40px;
+    }
+
+    &_info p {
+      color: white;
+      padding: 10px;
+    }
+
+    &_cards {
+      .card:nth-child(3n + 1) {
+        .cardfront::after {
+          background-color: $naranja;
+          top: 16px;
+          right: 0px;
+        }
+
+        .cardfront::before {
+          background-color: $amarillo;
+          top: 23px;
+          right: -10px;
+        }
+
+        .cardfront {
+          background-image: url("assets/texturas/3.png");
+          background-size: 80%;
+          background-color: $morado;
+        }
+      }
+
+      .card:nth-child(3n + 2) {
+        .cardfront::after {
+          background-color: $verde-azul;
+          top: 16px;
+          left: 0px;
+        }
+
+        .cardfront::before {
+          background-color: $amarillo;
+          top: 23px;
+          left: -10px;
+        }
+
+        .cardfront {
+          background-image: url("assets/texturas/3.png");
+          background-size: 80%;
+          background-color: $naranja;
+        }
+      }
+
+      .card:nth-child(3n + 3) {
+        .cardfront::after {
+          background-color: $amarillo;
+          top: 16px;
+          right: 0px;
+        }
+
+        .cardfront::before {
+          background-color: $morado;
+          top: 23px;
+          right: -10px;
+        }
+
+        .cardfront {
+          background-color: $rojo;
+        }
+      }
+
+      .card {
+        margin-bottom: 10px;
+
+        &_container {
+          width: 100%;
+          padding: 10px;
+          position: relative;
+          margin-top: 30px;
+          z-index: 2;
+
+          .cardfront::after {
+            content: "";
+            display: block;
+            width: 90%;
+            border-radius: 50px;
+            border: 3px white solid;
+            height: 95%;
+            position: absolute;
+            z-index: -1;
+          }
+
+          .cardfront::before {
+            content: "";
+            display: block;
+            width: 90%;
+            border-radius: 50px;
+            border: 3px white solid;
+            height: 95%;
+            position: absolute;
+            z-index: -2;
+          }
+
+          .cardfront {
+            border-radius: 50px;
+            border: 3px white solid;
+            height: 450px;
+
+            .buttonDescargar {
+              text-align: center;
+            }
+
+            .buttonDescargar button {
+              background-color: transparent;
+              color: white;
+              border: none;
+              background-color: $rojo;
+              padding: 10px 20px;
+              border-radius: 40px;
+            }
+            .contentIcons {
+              text-align: end;
+              margin: 10px;
+            }
+
+            .contentIcons img {
+              width: 50px;
+              margin: 0px 10px;
+            }
+            .contentImg {
+              text-align: center;
+              padding: 20px;
+            }
+            .contentImg img {
+              width: 100%;
+              object-fit: cover;
+              border: 3px white solid;
+              border-top-right-radius: 40px;
+              border-bottom-right-radius: 40px;
+              border-top-left-radius: 40px;
+            }
+
+            .text1 {
+              color: white;
+              padding: 0px 30px;
+            }
+
+            .text2 {
+              color: white;
+              word-wrap: break-word;
+              padding: 20px 40px 30px 30px;
+            }
+          }
+        }
+      }
+    }
+
+    &_buttonVerLista {
+      text-align: center;
+      margin: 50px 0px;
+      position: relative;
+      z-index: 1;
+    }
+
+    &_buttonVerLista button {
+      color: white;
+      background-color: $azul;
+      border: 2px white solid;
+      padding: 10px 40px;
+      font-size: 20px;
+      border-radius: 40px;
+      position: relative;
+    }
+
+    &_buttonVerLista button::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: $morado;
+      position: absolute;
+      border-radius: 40px;
+      border: 2px white solid;
+      top: 5px;
+      right: -10px;
+      z-index: -1;
+    }
+  }
+}

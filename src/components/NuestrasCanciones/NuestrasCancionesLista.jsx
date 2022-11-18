@@ -1,0 +1,61 @@
+import React, { useEffect, useState } from "react";
+import { getSongs, pageSongs } from "../../api/api";
+import { useNavigate } from "react-router-dom";
+import MenuMobil from "../Menu/MenuMobil";
+import Footer from "../Footer/Footer";
+const NuestrasCancionesLista = () => {
+  const navigate = useNavigate();
+  const [ourSongs, setOurSongs] = useState([]);
+  const [infoPage, setInfoPage] = useState([]);
+
+  useEffect(() => {
+    getSongs().then((data) => setOurSongs(data.data));
+    pageSongs().then((data) => setInfoPage(data.data));
+  }, []);
+
+  return (
+    <div className="nuestrasCancionesLista">
+      <MenuMobil />
+      <div className="nuestrasCancionesLista_container">
+        <div className="logo">
+          <img src="assets/logo.png" alt="" />
+        </div>
+
+
+
+        <div className="arrow">
+          <img
+            onClick={() => navigate("/nuestrasCanciones")}
+            src="/public/assets/atras.png"
+            alt=""
+          />
+        </div>
+
+        <h1 className="title">{infoPage.titulo}</h1>
+        <div className="playlist">
+          <h1>PLAYLIST</h1>
+          <img src="assets/playlist.png" alt="" />
+        </div>
+
+        <div className="contentListSongs">
+          {ourSongs.map((item) => {
+            return (
+              <div key={item.id} className="listSongs">
+                <h1>{item.titulo}</h1>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="buttonPortadas">
+          <button onClick={() => navigate("/nuestrasCanciones")}>
+            VER PORTADAS
+          </button>
+        </div>
+      </div>
+      <Footer />
+    </div>
+  );
+};
+
+export default NuestrasCancionesLista;
