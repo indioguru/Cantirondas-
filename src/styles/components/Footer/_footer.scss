@@ -3,7 +3,8 @@
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
-
+    max-width: 1200px;
+    margin: 0 auto;
     justify-content: space-around;
     &_items {
       display: flex;

@@ -17,14 +17,15 @@
 
   @media (min-width: 700px) {
     &_container h3 {
-      font-size: 3vw;
+      font-size: 2vw;
       width: 33vw;
     }
   }
 
   &_container {
     padding: 20px;
-
+    max-width: 1200px;
+    margin: 0 auto;
     @media (min-width: 600px) {
       &_one {
         display: flex;

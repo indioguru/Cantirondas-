@@ -44,38 +44,54 @@ const MenuMobil = () => {
             }`}
           >
             <div className="menuMobilOpen">
-              <div className="buttonClose">
-                <img
-                  onClick={() => {
-                    setTimeout(setTime, 0);
-                    activeAnim();
-                    showMenu();
-                  }}
-                  src="assets/x.png"
-                  alt=""
-                />
-              </div>
-
               <div className="prueba">
-                <div className="logo">
-                  <img src="assets/logo.png" alt="" />
+                <div className="buttonClose">
+                  <img
+                    onClick={() => {
+                      setTimeout(setTime, 0);
+                      activeAnim();
+                      showMenu();
+                    }}
+                    src="assets/x.png"
+                    alt=""
+                  />
                 </div>
 
-                <div className="content_info">
-                  <h2 onClick={() => navigate("/nuestrasCanciones")}>NUESTRAS CANCIONES</h2>
-                  <h2>TIENDA</h2>
-                  <h2 onClick={() => navigate("descargables")}>DESCARGABLES</h2>
-
-                  <div className="content_info_icons">
-                    <div className="youtube"></div>
-                    <div className="spotify"></div>
-                    <div className="instagram"></div>
-                    <div className="facebook"></div>
+                <div className="prueba">
+                  <div className="logo">
+                    <img src="assets/logo.png" alt="" />
                   </div>
-                </div>
 
-                <div className="logoDino">
-                  <img src="assets/dino2.png" alt="" />
+                  <div className="content_info">
+                    <h2
+                      onClick={() => {
+                        showMenu();
+                        navigate("/nuestrasCanciones");
+                      }}
+                    >
+                      NUESTRAS CANCIONES
+                    </h2>
+                    <h2>TIENDA</h2>
+                    <h2
+                      onClick={() => {
+                        showMenu();
+                        navigate("/descargables");
+                      }}
+                    >
+                      DESCARGABLES
+                    </h2>
+
+                    <div className="content_info_icons">
+                      <div className="youtube"></div>
+                      <div className="spotify"></div>
+                      <div className="instagram"></div>
+                      <div className="facebook"></div>
+                    </div>
+                  </div>
+
+                  <div className="logoDino">
+                    <img src="assets/dino2.png" alt="" />
+                  </div>
                 </div>
               </div>
             </div>
