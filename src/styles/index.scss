@@ -12,6 +12,19 @@ $verde: #2cc821;
 $amarillo: #f5d51e;
 $azul: #0184bb;
 
+$ancho-boton: 200px;
+
+@font-face {
+  font-family: "Arco";
+  src: url(assets/Fuentes/arco/ARCO.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Conforta";
+  src: url(assets/Fuentes/Comfortaa/static/Comfortaa-Regular.ttf)
+    format("truetype");
+}
+
 .noScroll {
   overflow: hidden;
 }
@@ -23,3 +36,4 @@ $azul: #0184bb;
 @import "./components/Footer/footer";
 @import "./components/Descargables/descargables";
 @import "./components/Descargables/descargablesLista";
+@import "./components/Loader/loader";

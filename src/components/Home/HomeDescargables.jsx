@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Pagination } from "swiper";
+import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { downloads } from "../../api/api";
 import "swiper/scss";
 import "swiper/scss/pagination";
+import "swiper/css/navigation";
 import "./styles.css";
 import { useNavigate } from "react-router-dom";
 
@@ -30,17 +32,16 @@ const HomeDescargables = () => {
         <h1 className="title">DESCARGABLES</h1>
 
         <div className="home_downloads_container_destok">
-          <div className="home_downloads_container_destok_one">
-            <Swiper
-              pagination={true}
-              modules={[Pagination]}
-              className="mySwiper"
-            >
-
-              
-              {downloadsInfo.map((item) => {
-                return (
-                  <SwiperSlide className="card" key={item.id}>
+          <Swiper
+            pagination={true}
+            navigation={true}
+            modules={[Pagination, Navigation]}
+            className="mySwiper"
+          >
+            {downloadsInfo.map((item) => {
+              return (
+                <SwiperSlide className="card" key={item.id}>
+                  <div className="destok_one">
                     <div className="card_container">
                       <div className="cardfront">
                         <div className="contentImg">
@@ -50,23 +51,23 @@ const HomeDescargables = () => {
                         <p className="text2"> {item.descripcion}</p>
                       </div>
                     </div>
-                  </SwiperSlide>
-                );
-              })}
-            </Swiper>
-          </div>
+                  </div>
 
-          <div className="home_downloads_container_destok_two">
-            <div className="buttonDescargas">
-              <button>DESCARGAR</button>
-            </div>
+                  <div className="destok_two">
+                    <div className="buttonDescargas">
+                      <button>DESCARGAR</button>
+                    </div>
 
-            <div className="buttonVerTodo">
-              <button onClick={() => navigate("/descargables")}>
-                VER TODOS
-              </button>
-            </div>
-          </div>
+                    <div className="buttonVerTodo">
+                      <button onClick={() => navigate("/descargables")}>
+                        VER TODOS
+                      </button>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
         </div>
       </div>
     </div>

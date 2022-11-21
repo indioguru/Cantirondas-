@@ -16,7 +16,7 @@
   text-align: center;
   transition: 300ms opacity;
   transform: translate3d(0, 0, 0);
-  top: -450px;
+  top: -530px;
   z-index: 15;
 }
 
@@ -44,7 +44,11 @@
   color: transparent;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 750px) {
+
+  .swiper-pagination{
+    top: -500px;
+  }
   .swiper-button-prev:after,
   .swiper-rtl .swiper-button-next:after {
     background-image: unset;

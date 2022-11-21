@@ -18,14 +18,16 @@ const HomeCantemosJuntos = () => {
         <div className="home_header_container_one">
           <div className="title">
             <h3>{dataHome.texto_BIENVENIDA}</h3>
-            <h3>¡CANTEMOS JUNTOS!</h3>
+            <h2>¡CANTEMOS JUNTOS!</h2>
           </div>
 
           <div className="contenTexts">
-            <div className="contenTextTwo">
-              <div className="welcomeTextTwo">
-                <h5>{dataHome.texto_BIENVENIDA_2}</h5>
-                <img src="assets/dino.png" alt="" />
+            <div className="anim">
+              <div className="contenTextTwo">
+                <div className="welcomeTextTwo">
+                  <h5>{dataHome.texto_BIENVENIDA_2}</h5>
+                  <img src="assets/dino.png" alt="" />
+                </div>
               </div>
             </div>
           </div>

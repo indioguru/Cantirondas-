@@ -9,6 +9,7 @@
         align-items: center;
         justify-content: space-around;
         margin-bottom: 150px;
+        margin-top: 100px;
         &_two {
           width: 50%;
         }
@@ -22,19 +23,40 @@
           .contetButtonPlaylistDestok button {
             background-color: $morado;
             color: white;
-            padding: 10px 20px;
+            padding: 10px 20px 15px 20px;
             border: none;
             border-radius: 40px;
-            border: 1px white solid;
-            font-size: 20px;
+            border: 3px white solid;
+            font-size: 40px;
             margin-top: 40px;
+            font-family: Arco;
+            font-weight: 100;
+            transition: scale, 0.4s ease;
+          }
+
+          @media (hover: hover) {
+            .contetButtonPlaylistDestok button:hover {
+              background-color: $azul;
+              transform: scale(1.15);
+              transition: scale, 0.4s ease;
+              cursor: pointer;
+            }
           }
         }
       }
     }
+
     & h1 {
       text-align: center;
       color: white;
+      font-family: Arco;
+      font-weight: 100;
+    }
+
+    @media (min-width: 600px) {
+      & h1 {
+        font-size: 40px;
+      }
     }
 
     .contetButtonPlaylist {
@@ -51,13 +73,32 @@
       border: 1px white solid;
       font-size: 20px;
       margin-bottom: 150px;
+      font-family: Arco;
+      font-weight: 100;
     }
 
     .containerCard:nth-child(3n + 1) {
       .card::after {
         background-color: $verde-azul;
-        top: 16px;
-        right: 0px;
+        top: 10px;
+        right: 10px;
+      }
+
+      .card::before {
+        background-color: $naranja;
+        top: 10px;
+        right: 10px;
+        opacity: 0;
+        transition: opacity, top, right, 0.4s 0s ease;
+      }
+
+      @media (hover: hover) {
+        .card:hover:before {
+          top: 20px;
+          right: 20px;
+          opacity: 1;
+          transition: opacity, top, right, 0.4s 0s ease;
+        }
       }
 
       .card {
@@ -68,8 +109,25 @@
     .containerCard:nth-child(3n + 2) {
       .card::after {
         background-color: $rojo;
-        top: 16px;
-        left: 0px;
+        top: 10px;
+        left: 10px;
+      }
+
+      .card::before {
+        background-color: $verde-azul;
+        top: 10px;
+        left: 10px;
+        opacity: 0;
+        transition: opacity, top, left, 0.4s 0s ease;
+      }
+
+      @media (hover: hover) {
+        .card:hover:before {
+          top: 20px;
+          left: 20px;
+          opacity: 1;
+          transition: opacity, top, left, 0.4s 0s ease;
+        }
       }
 
       .card {
@@ -80,8 +138,24 @@
     .containerCard:nth-child(3n + 3) {
       .card::after {
         background-color: $amarillo;
-        top: 16px;
-        left: 0px;
+        top: 10px;
+        left: 10px;
+      }
+      .card::before {
+        background-color: $azul;
+        top: 10px;
+        left: 10px;
+        opacity: 0;
+        transition: opacity, top, left, 0.4s 0s ease;
+      }
+
+      @media (hover: hover) {
+        .card:hover:before {
+          top: 20px;
+          left: 20px;
+          opacity: 1;
+          transition: opacity, top, left, 0.4s 0s ease;
+        }
       }
 
       .card {
@@ -89,22 +163,35 @@
       }
     }
 
+    @media (hover: hover) {
+      .contentCard:hover {
+        transform: scale(1.15);
+        transition: scale, 0.4s ease;
+      }
+    }
     .contentCard {
-      width: 100%;
-      padding: 10px;
       position: relative;
-      margin-top: 30px;
-      z-index: 2;
-      max-width: 350px;
-      margin: 0 auto;
       margin-top: 60px;
+      margin-bottom: 50px;
+      transition: scale, 0.4s ease;
       .card::after {
         content: "";
         display: block;
-        width: 90%;
+        width: 100%;
+        height: 100%;
         border-radius: 50px;
         border: 2px white solid;
-        height: 95%;
+        position: absolute;
+        z-index: -1;
+      }
+
+      .card::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 50px;
+        border: 2px white solid;
         position: absolute;
         z-index: -1;
       }
@@ -112,20 +199,55 @@
       .card {
         border-radius: 50px;
         border: 2px white solid;
-        height: 400px;
+        height: 420px;
+        width: 310px;
 
+        position: relative;
+        margin: 0 auto;
+        transition: width, height, 0.4s 0s ease;
         .contentIcons {
-          text-align: center;
-          margin: 10px;
+          display: flex;
+          justify-content: end;
+          align-items: center;
+          margin: 0px 10px 0px 0px;
         }
 
-        .contentIcons img {
+        .yotube {
+          background-image: url("assets/Botones/youtube.png");
+          background-size: cover;
           width: 50px;
-          margin: 0px 10px;
+          height: 50px;
+          margin: 5px;
+          transition: scale, 0.4s ease;
+        }
+
+        .spo {
+          background-image: url("assets/Botones/spotify.png");
+          background-size: cover;
+          width: 50px;
+          height: 50px;
+          margin: 5px;
+          transition: scale, 0.4s ease;
+        }
+
+        @media (hover: hover) {
+          .yotube:hover {
+            cursor: pointer;
+            background-image: url("assets/Botones/youtube_hover.png");
+            transform: scale(1.15);
+            transition: scale, 0.4s ease;
+          }
+
+          .spo:hover {
+            cursor: pointer;
+            background-image: url("assets/Botones/spotify_hover.png");
+            transform: scale(1.15);
+            transition: scale, 0.4s ease;
+          }
         }
         .contentImg {
           text-align: center;
-          padding: 20px;
+          padding: 20px 20px 10px 20px;
         }
         .contentImg img {
           width: 100%;
@@ -136,15 +258,23 @@
           border-top-left-radius: 40px;
         }
 
-        .featuredSongs h2 {
+        .text1 {
           text-align: center;
           color: white;
+          font-family: Arco;
+          font-weight: 100;
+          overflow: auto;
+          max-height: 60px;
         }
 
-        .featuredSongs p {
+        .text2 {
           color: white;
           word-wrap: break-word;
           padding: 10px 20px;
+          font-family: Conforta;
+          font-weight: 100;
+          overflow: auto;
+          height: 110px;
         }
       }
     }

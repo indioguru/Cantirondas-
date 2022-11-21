@@ -1,25 +1,139 @@
 .footer {
-  background-color: $verde-azul;
   &_container {
     padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-around;
     &_items {
       display: flex;
       justify-content: center;
+      flex-basis: 50%;
+      order: -5;
+      &_youtube {
+        width: 50px;
+        margin: 5px;
+        height: 50px;
+        background-image: url("assets/Botones/youtube.png");
+        background-size: cover;
+        transition: scale, 0.4s ease;
+      }
+
+      &_spotify {
+        width: 50px;
+        margin: 5px;
+        height: 50px;
+        background-image: url("assets/Botones/spotify.png");
+        background-size: cover;
+        transition: scale, 0.4s ease;
+      }
+      &_instagram {
+        width: 50px;
+        margin: 5px;
+        height: 50px;
+        background-image: url("assets/Botones/instagram.png");
+        background-size: cover;
+        transition: scale, 0.4s ease;
+      }
+      &_facebook {
+        width: 50px;
+        margin: 5px;
+        height: 50px;
+        background-image: url("assets/Botones/facebook.png");
+        background-size: cover;
+        transition: scale, 0.4s ease;
+      }
     }
+
     &_items img {
       width: 50px;
       margin: 10px;
     }
 
-    &_info{
-        margin-top: 30px;
-        margin-bottom: 100px;
+    &_info {
+      margin-top: 30px;
+      margin-bottom: 100px;
+      order: 5;
     }
 
     &_info h1 {
       padding: 10px 40px 10px 10px;
       font-size: 25px;
       color: white;
+      font-family: Arco;
+      font-weight: 100;
+      transition: scale, 0.4s ease;
+    }
+  }
+
+  @media (hover: hover) {
+    &_container {
+      &_info h1:hover {
+        cursor: pointer;
+        transform: scale(1.15);
+        transition: scale, 0.4s ease;
+      }
+      &_items {
+        &_youtube:hover {
+          background-image: url("assets/Botones/youtube_hover.png");
+          cursor: pointer;
+          transform: scale(1.15);
+          transition: scale, 0.4s ease;
+        }
+
+        &_spotify:hover {
+          background-image: url("assets/Botones/spotify_hover.png");
+          cursor: pointer;
+          transform: scale(1.15);
+          transition: scale, 0.4s ease;
+        }
+        &_instagram:hover {
+          background-image: url("assets/Botones/instagramhover.png");
+          cursor: pointer;
+          transform: scale(1.15);
+          transition: scale, 0.4s ease;
+        }
+        &_facebook:hover {
+          background-image: url("assets/Botones/facebookhover.png");
+          cursor: pointer;
+          transform: scale(1.15);
+          transition: scale, 0.4s ease;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 740px) {
+    &_container {
+      &_items {
+        order: 5;
+        margin-top: 20px;
+        &_youtube {
+          width: 80px;
+
+          height: 80px;
+        }
+
+        &_spotify {
+          width: 80px;
+
+          height: 80px;
+        }
+        &_instagram {
+          width: 80px;
+
+          height: 80px;
+        }
+        &_facebook {
+          width: 80px;
+
+          height: 80px;
+        }
+      }
+
+      &_info {
+        order: -5;
+      }
     }
   }
 }

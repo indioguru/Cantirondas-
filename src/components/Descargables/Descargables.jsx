@@ -14,18 +14,15 @@ const Descargables = () => {
 
   return (
     <div className="descargables">
-      <MenuMobil/>
-      <div className="descargables_container">
-        <div className="descargables_container_arrow">
+      <div className="arrow">
         <img
-            onClick={() => navigate("/")}
-            src="/public/assets/atras.png"
-            alt=""
-          />
-        </div>
-
-      
-
+          onClick={() => navigate("/")}
+          src="/public/assets/atras.png"
+          alt=""
+        />
+      </div>
+      <MenuMobil />
+      <div className="descargables_container">
         <div className="descargables_container_logo">
           <img src="assets/logo.png" alt="" />
         </div>
@@ -57,13 +54,15 @@ const Descargables = () => {
         </div>
 
         <div className="descargables_container_buttonVerLista">
-          <button onClick={() => navigate("/descargablesLista")}>
-            VER LISTA
-          </button>
+          <div className="descargables_container_buttonVerLista_anim">
+            <button onClick={() => navigate("/descargablesLista")}>
+              VER LISTA
+            </button>
+          </div>
         </div>
       </div>
 
-      <Footer />
+      <Footer color="#fa5456" />
     </div>
   );
 };

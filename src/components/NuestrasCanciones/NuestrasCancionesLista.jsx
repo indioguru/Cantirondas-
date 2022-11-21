@@ -5,6 +5,7 @@ import MenuMobil from "../Menu/MenuMobil";
 import Footer from "../Footer/Footer";
 const NuestrasCancionesLista = () => {
   const navigate = useNavigate();
+
   const [ourSongs, setOurSongs] = useState([]);
   const [infoPage, setInfoPage] = useState([]);
 
@@ -13,28 +14,38 @@ const NuestrasCancionesLista = () => {
     pageSongs().then((data) => setInfoPage(data.data));
   }, []);
 
+  console.log(infoPage);
+
   return (
     <div className="nuestrasCancionesLista">
       <MenuMobil />
+      <div className="arrow">
+        <img
+          onClick={() => navigate("/nuestrasCanciones")}
+          src="/public/assets/atras.png"
+          alt=""
+        />
+      </div>
       <div className="nuestrasCancionesLista_container">
         <div className="logo">
           <img src="assets/logo.png" alt="" />
         </div>
 
-
-
-        <div className="arrow">
-          <img
-            onClick={() => navigate("/nuestrasCanciones")}
-            src="/public/assets/atras.png"
-            alt=""
-          />
-        </div>
-
         <h1 className="title">{infoPage.titulo}</h1>
-        <div className="playlist">
-          <h1>PLAYLIST</h1>
-          <img src="assets/playlist.png" alt="" />
+
+        <div className="nuestrasCancionesLista_container_destok">
+          <div className="nuestrasCancionesLista_container_destok_one">
+            <div className="playlist">
+              <h1>PLAYLIST</h1>
+              <img src="assets/playlist.png" alt="" />
+            </div>
+          </div>
+
+          <div className="nuestrasCancionesLista_container_destok_two">
+            <div className="descripcion">
+              <p>{infoPage.descripcion}</p>
+            </div>
+          </div>
         </div>
 
         <div className="contentListSongs">
@@ -48,12 +59,14 @@ const NuestrasCancionesLista = () => {
         </div>
 
         <div className="buttonPortadas">
-          <button onClick={() => navigate("/nuestrasCanciones")}>
-            VER PORTADAS
-          </button>
+          <div className="buttonPortadas_anim">
+            <button onClick={() => navigate("/nuestrasCanciones")}>
+              VER PORTADAS
+            </button>
+          </div>
         </div>
       </div>
-      <Footer />
+      <Footer color="#fa8825" />
     </div>
   );
 };

@@ -13,7 +13,7 @@ const Home = () => {
         <HomeCantemosJuntos />
         <HomeCanciones />
         <HomeDescargables />
-        <Footer />
+        <Footer color="#01b4bb" />
       </div>
     </div>
   );

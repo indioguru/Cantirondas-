@@ -5,7 +5,6 @@ import { downloads } from "../../api/api";
 import { useNavigate } from "react-router-dom";
 
 const DescargablesList = () => {
-
   const navigate = useNavigate();
   const [downloadsInfo, setDownloadsInfo] = useState([]);
 
@@ -16,15 +15,15 @@ const DescargablesList = () => {
   return (
     <div className="descargablesLista">
       <MenuMobil />
-      <div className="descargablesLista_container">
 
-      <div className="descargablesLista_container_arrow">
+      <div className="arrow">
         <img
-            onClick={() => navigate("/descargables")}
-            src="/public/assets/atras.png"
-            alt=""
-          />
-        </div>
+          onClick={() => navigate("/descargables")}
+          src="/public/assets/atras.png"
+          alt=""
+        />
+      </div>
+      <div className="descargablesLista_container">
         <div className="descargablesLista_container_logo">
           <img src="assets/logo.png" alt="" />
         </div>
@@ -44,10 +43,14 @@ const DescargablesList = () => {
         </div>
 
         <div className="descargablesLista_container_buttonFichas">
-          <button onClick={() => navigate("/descargables")}>VER FICHAS</button>
+          <div className="descargablesLista_container_buttonFichas_anim">
+            <button onClick={() => navigate("/descargables")}>
+              VER FICHAS
+            </button>
+          </div>
         </div>
       </div>
-      <Footer />
+      <Footer color="#01b4bb" />
     </div>
   );
 };

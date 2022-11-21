@@ -1,11 +1,32 @@
 .nuestrasCanciones {
   background-color: $morado;
 
+  .arrow {
+    position: fixed;
+    top: 0;
+    margin-top: 70px;
+    margin-left: 20px;
+    z-index: 20;
+    transition: scale, 0.4s ease;
+  }
+
+  .arrow:hover {
+    cursor: pointer;
+    transform: scale(1.15);
+    transition: scale, 0.4s ease;
+  }
+
+  .arrow img {
+    width: 45px;
+  }
+
   &_container {
     padding: 20px;
     position: relative;
     z-index: 1;
-    max-width: 1200px;
+    max-width: 1000px;
+    margin: 0 auto;
+
     @media (min-width: 600px) {
       &_destok {
         margin-top: 20px;
@@ -28,27 +49,29 @@
 
     .logo img {
       width: 70%;
+      max-width: 400px;
     }
 
     .playlist img {
-      width: 50px;
-      margin: 0px 20px;
+      width: 60px;
+      margin: 0px 10px;
     }
     .playlist {
-      width: 80%;
-      height: 80px;
-      background-color: yellow;
+      width: 100%;
+      height: 90px;
       border-top-right-radius: 50px;
       border-bottom-right-radius: 50px;
       position: relative;
       border: 3px white solid;
-      border-left: none;
+
       background-color: $rojo;
       left: -20px;
       display: flex;
       justify-content: center;
       align-items: center;
       color: white;
+      font-family: Arco;
+      font-weight: 100;
     }
 
     .playlist::before {
@@ -61,7 +84,7 @@
       border: 3px white solid;
       border-top-right-radius: 50px;
       border-bottom-right-radius: 50px;
-      top: 4px;
+      top: 10px;
       left: 5px;
       z-index: -1;
     }
@@ -71,30 +94,41 @@
       color: white;
       margin-top: 40px;
       text-transform: uppercase;
+      font-family: Arco;
+      font-weight: 100;
+      margin-bottom: 20px;
     }
     .descripton {
       color: white;
       padding: 20px;
-
+      font-family: Conforta;
+      font-weight: 100;
       font-size: 20px;
-    }
-
-    .arrow {
-      position: fixed;
-      top: 0;
-      margin-top: 60px;
-      z-index: 20;
-    }
-
-    .arrow img {
-      width: 50px;
+      margin-top: 20px;
     }
 
     .card:nth-child(3n + 1) {
       .cardfront::after {
         background-color: $verde-azul;
-        top: 16px;
-        right: 0px;
+        top: 10px;
+        right: 10px;
+      }
+
+      .cardfront::before {
+        background-color: $verde;
+        top: 10px;
+        right: 10px;
+        opacity: 0;
+        transition: top, right, opacity, 0.4s ease;
+      }
+
+      @media (hover: hover) {
+        .cardfront:hover::before {
+          top: 20px;
+          right: 20px;
+          opacity: 1;
+          transition: top, right, opacity, 0.4s ease;
+        }
       }
 
       .cardfront {
@@ -105,88 +139,144 @@
     .card:nth-child(3n + 2) {
       .cardfront::after {
         background-color: $rojo;
-        top: 16px;
-        left: 0px;
+        top: 10px;
+        left: 10px;
       }
 
       .cardfront {
         background-color: $naranja;
+      }
+      .cardfront::before {
+        background-color: $verde-azul;
+        top: 10px;
+        left: 10px;
+        opacity: 0;
+        transition: top, left, opacity, 0.4s ease;
+      }
+
+      @media (hover: hover) {
+        .cardfront:hover::before {
+          top: 20px;
+          left: 20px;
+          opacity: 1;
+          transition: top, left, opacity, 0.4s ease;
+        }
       }
     }
 
     .card:nth-child(3n + 3) {
       .cardfront::after {
         background-color: $amarillo;
-        top: 16px;
-        right: 0px;
+        top: 10px;
+        right: 10px;
       }
 
       .cardfront {
         background-color: $rojo;
       }
-    }
 
-    @media (min-width: 600px) {
+      .cardfront::before {
+        background-color: $azul;
+        top: 10px;
+        right: 10px;
+        opacity: 0;
+        transition: top, right, opacity, 0.4s ease;
+      }
+
+      @media (hover: hover) {
+        .cardfront:hover::before {
+          top: 20px;
+          right: 20px;
+          opacity: 1;
+          transition: top, right, opacity, 0.4s ease;
+        }
+      }
+    }
+    @media (min-width: 760px) {
       .destok {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
-        margin-bottom: 300px;
-        .card {
-          width: 45%;
-        }
+        justify-content: space-around;
+        margin: 0 auto;
+        margin-bottom: 200px;
+      }
+
+      .card {
+        flex-basis: 50%;
       }
 
       .card:nth-child(2n) {
         transform: translateY(200px);
       }
-      .destok:nth-child(3n + 2) {
-      }
-
-      .destok:nth-child(3n + 3) {
-      }
     }
 
     .card {
-      max-width: 400px;
-      min-width: 200px;
-      min-height: 500px;
-      max-height: 300px;
-      padding: 20px;
-      &_container {
-        padding: 10px;
-        position: relative;
-        margin-top: 30px;
-        z-index: 2;
-        margin: 0 auto;
+      margin-bottom: 100px;
+      margin-top: 50px;
 
-        .cardfront::after {
-          content: "";
-          display: block;
-          width: 90%;
-          border-radius: 50px;
-          border: 3px white solid;
-          height: 95%;
-          position: absolute;
-          z-index: -1;
+      @media (hover: hover) {
+        &_container:hover {
+          transform: scale(1.15);
+          transition: scale, 0.4s ease;
         }
-
+      }
+      &_container {
+        position: relative;
+        transition: scale, 0.4s ease;
+        // margin: 50px 0px;
+        z-index: 2;
+        height: 420px;
+        margin: 0 auto;
+        max-width: 310px;
         .cardfront {
           border-radius: 50px;
           border: 3px white solid;
-          min-height: 300px;
+          height: 420px;
+          position: relative;
+
           .contentIcons {
-            text-align: end;
-            margin: 10px;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            margin: 0px 10px 0px 0px;
           }
 
-          .contentIcons img {
+          .yotube {
+            background-image: url("assets/Botones/youtube.png");
+            background-size: cover;
             width: 50px;
-            margin: 0px 10px;
+            height: 50px;
+            margin: 5px;
+            transition: scale, 0.4s ease;
+          }
+
+          .spo {
+            background-image: url("assets/Botones/spotify.png");
+            background-size: cover;
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            transition: scale, 0.4s ease;
+          }
+
+          @media (hover: hover) {
+            .yotube:hover {
+              cursor: pointer;
+              background-image: url("assets/Botones/youtube_hover.png");
+              transform: scale(1.15);
+              transition: scale, 0.4s ease;
+            }
+
+            .spo:hover {
+              cursor: pointer;
+              background-image: url("assets/Botones/spotify_hover.png");
+              transform: scale(1.15);
+              transition: scale, 0.4s ease;
+            }
           }
           .contentImg {
             text-align: center;
-            padding: 20px;
+            padding: 20px 20px 0px 20px;
           }
           .contentImg img {
             width: 100%;
@@ -200,13 +290,43 @@
           .text1 {
             text-align: center;
             color: white;
+            font-family: Arco;
+            font-weight: 100;
+            overflow: auto;
+            max-height: 60px;
           }
 
           .text2 {
             color: white;
             word-wrap: break-word;
             padding: 10px 20px;
+            font-family: Conforta;
+            font-weight: 100;
+            overflow: auto;
+            height: 110px;
           }
+        }
+
+        .cardfront::after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 100%;
+          border-radius: 50px;
+          border: 3px white solid;
+          position: absolute;
+          z-index: -1;
+        }
+
+        .cardfront::before {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 100%;
+          border-radius: 50px;
+          border: 3px white solid;
+          position: absolute;
+          z-index: -1;
         }
       }
     }
@@ -216,30 +336,72 @@
       margin-bottom: 40px;
       position: relative;
       z-index: 2;
-    }
 
-    .buttonVerLista button {
-      padding: 10px 50px;
-      background-color: $rojo;
-      color: white;
-      font-size: 30px;
-      border-radius: 40px;
-      border: 3px white solid;
-      position: relative;
-    }
+      &_anim {
+        width: 200px;
+        margin: 0 auto;
+        transition: scale, 0.4s ease;
+      }
 
-    .buttonVerLista button::before {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 100%;
-      background-color: $amarillo;
-      border-radius: 40px;
-      border: 3px white solid;
-      left: 6px;
-      top: 6px;
-      position: absolute;
-      z-index: -1;
+      &_anim button {
+        background-color: $rojo;
+        color: white;
+        width: 100%;
+        border-radius: 40px;
+        border: 3px white solid;
+        position: relative;
+        font-family: Arco;
+        font-weight: 100;
+        height: 50px;
+        font-size: 20px;
+      }
+
+      &_anim button::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: $amarillo;
+        border-radius: 40px;
+        border: 3px white solid;
+        left: 5px;
+        top: 5px;
+        position: absolute;
+        z-index: -1;
+      }
+
+      &_anim button::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: $verde-azul;
+        border-radius: 40px;
+        border: 3px white solid;
+        left: 5px;
+        top: 5px;
+        opacity: 0;
+        position: absolute;
+        z-index: -1;
+      }
+
+      @media (hover: hover) {
+        &_anim:hover {
+          transform: scale(1.15);
+          transition: scale, 0.4s ease;
+        }
+
+        &_anim:hover button {
+          cursor: pointer;
+        }
+
+        &_anim button:hover::before {
+          opacity: 1;
+          top: 10px;
+          left: 10px;
+          transition: opacity, left, right, 0.4s ease;
+        }
+      }
     }
   }
 }

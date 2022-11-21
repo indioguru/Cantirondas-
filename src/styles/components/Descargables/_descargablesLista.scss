@@ -1,31 +1,51 @@
 .descargablesLista {
   background-color: $verde-azul;
-  background-image: url("/public//assets/texturas/4.png");
+  background-image: url("assets/texturas/4.png");
   background-size: 100%;
+
+  .arrow {
+    position: fixed;
+    top: 0;
+    margin-top: 70px;
+    margin-left: 20px;
+    z-index: 20;
+    transition: scale, 0.4s ease;
+  }
+
+  .arrow:hover {
+    cursor: pointer;
+    transform: scale(1.15);
+    transition: scale, 0.4s ease;
+  }
+
+  .arrow img {
+    width: 45px;
+  }
   &_container {
     padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
 
-    &_arrow {
-      position: fixed;
-      top: 0;
-      margin-top: 60px;
-      z-index: 20;
-    }
-
-    &_arrow img {
-      width: 50px;
-    }
     &_logo {
       text-align: end;
     }
 
     &_logo img {
       width: 70%;
+      max-width: 400px;
     }
 
     &_title {
       color: white;
       padding: 40px;
+      font-family: Arco;
+      font-weight: 100;
+    }
+
+    @media (min-width: 600px) {
+      &_title {
+        text-align: center;
+      }
     }
 
     &_buttonFichas {
@@ -33,39 +53,103 @@
       margin: 40px 0px;
       position: relative;
       z-index: 1;
-    }
 
-    &_buttonFichas button {
-      color: white;
-      border-radius: 40px;
-      border: 2px white solid;
-      background-color: $rojo;
-      padding: 10px 40px;
-      font-size: 20px;
-      position: relative;
-    }
+      &_anim {
+        width: 220px;
+        margin: 0 auto;
+        transition: scale, 0.4s ease;
+      }
 
-    &_buttonFichas button::after {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 100%;
-      background-color: $naranja;
-      border-radius: 40px;
-      border: 2px white solid;
-      position: absolute;
-      z-index: -1;
-      top: 5px;
-      left: 5px;
+      &_anim button {
+        color: white;
+        border-radius: 40px;
+        border: 2px white solid;
+        background-color: $rojo;
+        padding: 10px 40px;
+        font-size: 20px;
+        position: relative;
+        font-family: Arco;
+        font-weight: 100;
+      }
+
+      &_anim button::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: $naranja;
+        border-radius: 40px;
+        border: 2px white solid;
+        position: absolute;
+        z-index: -1;
+        top: 5px;
+        left: 5px;
+      }
+
+      &_anim button::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: $verde;
+        border-radius: 40px;
+        border: 2px white solid;
+        position: absolute;
+        z-index: -1;
+        top: 5px;
+        left: 5px;
+      }
+
+      @media (hover: hover) {
+        &_anim:hover {
+          transform: scale(1.15);
+          transition: scale, 0.4s ease;
+        }
+
+        &_anim:hover button {
+          cursor: pointer;
+        }
+
+        &_anim button:hover::before {
+          opacity: 1;
+
+          top: 10px;
+          left: 10px;
+          transition: opacity, top, left, 0.4s ease;
+        }
+      }
     }
 
     &_info {
       .listDownload h1 {
         color: white;
         padding: 10px;
-        font-size: 25px;
         margin-top: 10px;
-        margin-bottom: 00px;
+        font-family: Conforta;
+        font-weight: 100;
+      }
+
+      @media (hover: hover) {
+        .listDownload h1:hover {
+          font-family: Arco;
+        }
+      }
+    }
+
+    @media (min-width: 600px) {
+      &_info {
+        display: flex;
+        flex-wrap: wrap;
+
+        .listDownload:nth-child(2n + 1) {
+          flex-basis: 50%;
+          padding-left: 100px;
+        }
+
+        .listDownload:nth-child(2n + 2) {
+          flex-basis: 50%;
+          padding-left: 100px;
+        }
       }
     }
   }

@@ -3,19 +3,27 @@ import { getSongs, pageSongs } from "../../api/api";
 import { useNavigate } from "react-router-dom";
 import MenuMobil from "../Menu/MenuMobil";
 import Footer from "../Footer/Footer";
+import Loader from "../Loader/Loader";
 const NuestrasCanciones = () => {
   const navigate = useNavigate();
   const [ourSongs, setOurSongs] = useState([]);
   const [infoPage, setInfoPage] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
     getSongs().then((data) => setOurSongs(data.data));
     pageSongs().then((data) => setInfoPage(data.data));
+    setLoading(false);
   }, []);
 
   return (
     <div className="nuestrasCanciones">
+      {loading && <Loader />}
       <MenuMobil />
+      <div className="arrow">
+        <img onClick={() => navigate("/")} src="assets/atras.png" alt="" />
+      </div>
       <div className="nuestrasCanciones_container">
         <div className="logo">
           <img src="assets/logo.png" alt="" />
@@ -34,14 +42,6 @@ const NuestrasCanciones = () => {
           </div>
         </div>
 
-        <div className="arrow">
-          <img
-            onClick={() => navigate("/")}
-            src="/public/assets/atras.png"
-            alt=""
-          />
-        </div>
-
         <div className="destok">
           {ourSongs.map((item) => {
             return (
@@ -55,22 +55,8 @@ const NuestrasCanciones = () => {
                     <p className="text2"> {item.descripcion}</p>
 
                     <div className="contentIcons">
-                      {item.url_SPOTIFY ? (
-                        <img
-                          src="assets/Botones redes sociales/spotify.png"
-                          alt="So"
-                        />
-                      ) : (
-                        ""
-                      )}
-                      {item.url_YOUTUBE ? (
-                        <img
-                          src="assets/Botones redes sociales/youtube.png"
-                          alt="So"
-                        />
-                      ) : (
-                        ""
-                      )}
+                      {item.url_SPOTIFY ? <div className="yotube"></div> : ""}
+                      {item.url_YOUTUBE ? <div className="spo"></div> : ""}
                     </div>
                   </div>
                 </div>
@@ -80,12 +66,14 @@ const NuestrasCanciones = () => {
         </div>
 
         <div className="buttonVerLista">
-          <button onClick={() => navigate("/nuestrasCancionesLista")}>
-            VER LISTA
-          </button>
+          <div className="buttonVerLista_anim">
+            <button onClick={() => navigate("/nuestrasCancionesLista")}>
+              VER LISTA
+            </button>
+          </div>
         </div>
       </div>
-      <Footer />
+      <Footer color="#8554fa" />
     </div>
   );
 };
