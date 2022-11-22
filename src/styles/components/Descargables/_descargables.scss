@@ -19,7 +19,16 @@
   .arrow img {
     width: 45px;
   }
-  
+
+  @media (min-width: 800px) {
+    .arrow {
+      top: 20px;
+    }
+    .arrow img {
+      width: 75px;
+    }
+  }
+
   &_container {
     padding: 20px;
     max-width: 1000px;
@@ -30,24 +39,33 @@
     }
 
     &_logo img {
-      width: 70%;
-      max-width: 400px;
+      width: 240px;
+      height: 40px;
+    }
+
+    @media (min-width: 700px) {
+      &_logo img {
+        width: 477px;
+        height: 80px;
+      }
     }
     &_info h1 {
       color: white;
       padding: 20px;
-      font-size: 40px;
+      font-size: 35px;
       font-family: Arco;
       font-weight: 100;
     }
 
-    @media (min-width: 600px) {
+    @media (min-width: 900px) {
       &_info h1 {
         text-align: center;
+        font-size: 60px;
       }
 
       &_info p {
         text-align: center;
+        font-size: 30px;
       }
     }
 
@@ -56,6 +74,7 @@
       padding: 10px;
       font-family: Conforta;
       font-weight: 100;
+      font-size: 15px;
     }
 
     @media (min-width: 760px) {
@@ -84,7 +103,7 @@
         }
 
         .cardfront::before {
-          background-color: $amarillo;
+          background-color: $morado;
           top: 20px;
           right: 20px;
         }
@@ -106,9 +125,9 @@
         }
 
         .cardfront {
-          background-image: url("assets/texturas/1.png");
+          background-image: url("assets/texturas/4.png");
           background-size: 100%;
-          background-color: $morado;
+          background-color: $verde-azul;
         }
       }
 
@@ -120,7 +139,7 @@
         }
 
         .cardfront::before {
-          background-color: $amarillo;
+          background-color: $naranja;
           top: 20px;
           left: 20px;
         }
@@ -142,15 +161,15 @@
         }
 
         .cardfront {
-          background-image: url("assets/texturas/3.png");
+          background-image: url("assets/texturas/1.png");
           background-size: 100%;
-          background-color: $naranja;
+          background-color: $morado;
         }
       }
 
       .card:nth-child(3n + 3) {
         .cardfront::after {
-          background-color: $amarillo;
+          background-color: $verde-azul;
           top: 10px;
           right: 10px;
         }
@@ -178,7 +197,9 @@
         }
 
         .cardfront {
-          background-color: $rojo;
+          background-color: $naranja;
+          background-image: url("assets/texturas/3.png");
+          background-size: cover;
         }
       }
 
@@ -231,17 +252,17 @@
             position: relative;
             .buttonDescargar {
               text-align: center;
-              width: 100%;
             }
 
             .buttonDescargar button {
-              color: white;
+              color: $rojo;
               border: none;
               background-color: unset;
-              padding: 10px 20px;
+              -webkit-text-stroke: 1px white;
               border-radius: 40px;
               font-family: Arco;
               font-weight: 100;
+              font-size: 30px;
             }
             .contentIcons {
               text-align: end;
@@ -290,25 +311,34 @@
 
     &_buttonVerLista {
       text-align: center;
-      margin: 50px 0px;
+      margin-bottom: 100px;
       position: relative;
-      z-index: 1;
+      z-index: 2;
       &_anim {
-        width: 200px;
         margin: 0 auto;
         transition: scale, 0.4s ease;
       }
 
       &_anim button {
+        background-color: $verde-azul;
         color: white;
-        background-color: $azul;
-        border: 2px white solid;
-        padding: 10px 40px;
-        font-size: 20px;
+        width: 100%;
         border-radius: 40px;
+        border: 3px white solid;
         position: relative;
         font-family: Arco;
         font-weight: 100;
+        font-size: 25px;
+        width: 238px;
+        height: 54px;
+      }
+
+      @media (min-width: 900px) {
+        &_anim button {
+          font-size: 40px;
+          width: 394px;
+          height: 70px;
+        }
       }
 
       &_anim button::after {
@@ -320,7 +350,7 @@
         position: absolute;
         border-radius: 40px;
         border: 2px white solid;
-        top: 5px;
+        top: 8px;
         right: -10px;
         z-index: -1;
       }
@@ -333,7 +363,7 @@
         position: absolute;
         border-radius: 40px;
         border: 2px white solid;
-        top: 5px;
+        top: 8px;
         right: -10px;
         z-index: -1;
         opacity: 0;
@@ -353,7 +383,7 @@
         &_anim button:hover::before {
           opacity: 1;
 
-          top: 10px;
+          top: 17px;
           right: -15px;
           transition: opacity, top, right, 0.4s ease;
         }

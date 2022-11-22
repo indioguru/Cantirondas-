@@ -1,7 +1,5 @@
 .descargablesLista {
   background-color: $verde-azul;
-  background-image: url("assets/texturas/4.png");
-  background-size: 100%;
 
   .arrow {
     position: fixed;
@@ -21,6 +19,15 @@
   .arrow img {
     width: 45px;
   }
+
+  @media (min-width: 800px) {
+    .arrow {
+      top: 20px;
+    }
+    .arrow img {
+      width: 75px;
+    }
+  }
   &_container {
     padding: 20px;
     max-width: 1000px;
@@ -35,11 +42,34 @@
       max-width: 400px;
     }
 
-    &_title {
+    &_title h1 {
       color: white;
-      padding: 40px;
       font-family: Arco;
       font-weight: 100;
+      font-size: 35px;
+      text-align: center;
+    }
+
+    .description {
+      color: white;
+      padding: 10px;
+      font-family: Conforta;
+      font-weight: 100;
+      font-size: 15px;
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: 900px) {
+      &_title h1 {
+        text-align: center;
+        font-size: 60px;
+      }
+
+      .description {
+        text-align: center;
+        font-size: 30px;
+      }
     }
 
     @media (min-width: 600px) {
@@ -50,26 +80,35 @@
 
     &_buttonFichas {
       text-align: center;
-      margin: 40px 0px;
+      margin-bottom: 100px;
       position: relative;
-      z-index: 1;
-
+      z-index: 2;
+      margin-top: 100px;
       &_anim {
-        width: 220px;
         margin: 0 auto;
         transition: scale, 0.4s ease;
       }
 
       &_anim button {
-        color: white;
-        border-radius: 40px;
-        border: 2px white solid;
         background-color: $rojo;
-        padding: 10px 40px;
-        font-size: 20px;
+        color: white;
+        width: 100%;
+        border-radius: 40px;
+        border: 3px white solid;
         position: relative;
         font-family: Arco;
         font-weight: 100;
+        font-size: 25px;
+        width: 238px;
+        height: 54px;
+      }
+
+      @media (min-width: 900px) {
+        &_anim button {
+          font-size: 40px;
+          width: 394px;
+          height: 70px;
+        }
       }
 
       &_anim button::after {
@@ -82,7 +121,7 @@
         border: 2px white solid;
         position: absolute;
         z-index: -1;
-        top: 5px;
+        top: 8px;
         left: 5px;
       }
 
@@ -91,12 +130,12 @@
         display: block;
         width: 100%;
         height: 100%;
-        background-color: $verde;
+        background-color: $azul;
         border-radius: 40px;
         border: 2px white solid;
         position: absolute;
         z-index: -1;
-        top: 5px;
+        top: 8px;
         left: 5px;
       }
 
@@ -112,8 +151,7 @@
 
         &_anim button:hover::before {
           opacity: 1;
-
-          top: 10px;
+          top: 17px;
           left: 10px;
           transition: opacity, top, left, 0.4s ease;
         }

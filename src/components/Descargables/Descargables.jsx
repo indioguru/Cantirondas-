@@ -2,24 +2,27 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { pageDownloads, downloads } from "../../api/api";
 import Footer from "../Footer/Footer";
+import Loader from "../Loader/Loader";
 import MenuMobil from "../Menu/MenuMobil";
 const Descargables = () => {
   const navigate = useNavigate();
   const [infoPage, setInfoPage] = useState([]);
   const [infoDownloads, setInfoDownloads] = useState([]);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
+    setLoading(true);
     pageDownloads().then((data) => setInfoPage(data.data));
-    downloads().then((data) => setInfoDownloads(data.data));
+    downloads().then((data) => {
+      setInfoDownloads(data.data);
+      setLoading(false);
+    });
   }, []);
 
   return (
     <div className="descargables">
+      {loading && <Loader />}
       <div className="arrow">
-        <img
-          onClick={() => navigate("/")}
-          src="/public/assets/atras.png"
-          alt=""
-        />
+        <img onClick={() => navigate("/")} src="assets/atras.png" alt="" />
       </div>
       <MenuMobil />
       <div className="descargables_container">

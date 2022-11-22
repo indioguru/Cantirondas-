@@ -6,27 +6,47 @@ import { downloads } from "../../api/api";
 import "swiper/scss";
 import "swiper/scss/pagination";
 import "swiper/css/navigation";
-import "./styles.css";
 import { useNavigate } from "react-router-dom";
+import Loader from "../Loader/Loader";
 
 const HomeDescargables = () => {
   const navigate = useNavigate();
   const [downloadsInfo, setDownloadsInfo] = useState([]);
-
+  const [loading, setLoading] = useState(false);
+  const [color, setcolor] = useState(0);
   useEffect(() => {
-    downloads().then((data) => setDownloadsInfo(data.data));
+    setLoading(true);
+    downloads().then((data) => {
+      setDownloadsInfo(data.data);
+      setLoading(false);
+    });
   }, []);
 
-  console.log(downloadsInfo);
+  const changeBackground = () => {
+    const colors = ["#01BB77", "#0184bb", "#fa5456"];
+
+    if (color == 2) {
+      setcolor(0);
+    } else {
+      setcolor(color + 1);
+    }
+
+    const howDowloads = document.querySelector(".home_downloads");
+    howDowloads.style.background = colors[color];
+  };
+
   return (
     <div className="home_downloads">
+      {loading && <Loader />}
       <div className="home_downloads_container">
-        <div className="textReferenceOne">
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum
-          </p>
-          <img src="/public/assets/rodadero.png" alt="" />
+        <div className="anim2">
+          <div className="textReferenceOne">
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum
+            </p>
+            <img src="assets/rodadero.png" alt="" />
+          </div>
         </div>
 
         <h1 className="title">DESCARGABLES</h1>
@@ -37,34 +57,42 @@ const HomeDescargables = () => {
             navigation={true}
             modules={[Pagination, Navigation]}
             className="mySwiper"
+            onSlideChange={() => changeBackground()}
           >
             {downloadsInfo.map((item) => {
               return (
-                <SwiperSlide className="card" key={item.id}>
-                  <div className="destok_one">
-                    <div className="card_container">
-                      <div className="cardfront">
-                        <div className="contentImg">
-                          <img src={item.portada?.url} alt="" />
+                <div className="conterAll">
+                  {item.destacado ? (
+                    <SwiperSlide className="card" key={item.id}>
+                      {item.destacado}
+                      <div className="destok_one">
+                        <div className="card_container">
+                          <div className="cardfront">
+                            <div className="contentImg">
+                              <img src={item.portada?.url} alt="" />
+                            </div>
+                            <h2 className="text1">{item.titulo}</h2>
+                            <p className="text2"> {item.descripcion}</p>
+                          </div>
                         </div>
-                        <h2 className="text1">{item.titulo}</h2>
-                        <p className="text2"> {item.descripcion}</p>
                       </div>
-                    </div>
-                  </div>
 
-                  <div className="destok_two">
-                    <div className="buttonDescargas">
-                      <button>DESCARGAR</button>
-                    </div>
+                      <div className="destok_two">
+                        <div className="buttonDescargas">
+                          <button>DESCARGAR</button>
+                        </div>
 
-                    <div className="buttonVerTodo">
-                      <button onClick={() => navigate("/descargables")}>
-                        VER TODOS
-                      </button>
-                    </div>
-                  </div>
-                </SwiperSlide>
+                        <div className="buttonVerTodo">
+                          <button onClick={() => navigate("/descargables")}>
+                            VER TODOS
+                          </button>
+                        </div>
+                      </div>
+                    </SwiperSlide>
+                  ) : (
+                    ""
+                  )}
+                </div>
               );
             })}
           </Swiper>

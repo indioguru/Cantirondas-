@@ -1,9 +1,11 @@
 &_songs {
-  background-color: $rojo;
+  background-color: $naranja;
+
   &_container {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
+    @import "/src/styles/components/StylesSwipper/swipperCanciones";
     @media (min-width: 600px) {
       &_destok {
         display: flex;
@@ -22,7 +24,7 @@
           }
 
           .contetButtonPlaylistDestok button {
-            background-color: $morado;
+            background-color: $rojo;
             color: white;
             padding: 10px 20px 15px 20px;
             border: none;
@@ -34,7 +36,6 @@
             font-weight: 100;
             transition: scale, 0.4s ease;
           }
-
           @media (hover: hover) {
             .contetButtonPlaylistDestok button:hover {
               background-color: $azul;
@@ -52,6 +53,13 @@
       color: white;
       font-family: Arco;
       font-weight: 100;
+      font-size: 35px;
+    }
+
+    @media (min-width: 900px) {
+      & h1 {
+        font-size: 60px;
+      }
     }
 
     @media (min-width: 600px) {
@@ -62,7 +70,7 @@
 
     .contetButtonPlaylist {
       text-align: center;
-      margin-top: 30px;
+      margin-bottom: 50px;
     }
 
     .contetButtonPlaylist button {
@@ -71,8 +79,8 @@
       padding: 10px 20px;
       border: none;
       border-radius: 40px;
-      border: 1px white solid;
-      font-size: 20px;
+      border: 2px white solid;
+      font-size: 25px;
       margin-bottom: 150px;
       font-family: Arco;
       font-weight: 100;
@@ -80,13 +88,13 @@
 
     .containerCard:nth-child(3n + 1) {
       .card::after {
-        background-color: $verde-azul;
+        background-color: $verde;
         top: 10px;
         right: 10px;
       }
 
       .card::before {
-        background-color: $naranja;
+        background-color: $azul;
         top: 10px;
         right: 10px;
         opacity: 0;
@@ -103,19 +111,19 @@
       }
 
       .card {
-        background-color: $morado;
+        background-color: $rojo;
       }
     }
 
     .containerCard:nth-child(3n + 2) {
       .card::after {
-        background-color: $rojo;
+        background-color: $azul;
         top: 10px;
         left: 10px;
       }
 
       .card::before {
-        background-color: $verde-azul;
+        background-color: $rojo;
         top: 10px;
         left: 10px;
         opacity: 0;
@@ -132,18 +140,18 @@
       }
 
       .card {
-        background-color: $naranja;
+        background-color: $verde;
       }
     }
 
     .containerCard:nth-child(3n + 3) {
       .card::after {
-        background-color: $amarillo;
+        background-color: $rojo;
         top: 10px;
         left: 10px;
       }
       .card::before {
-        background-color: $azul;
+        background-color: $verde;
         top: 10px;
         left: 10px;
         opacity: 0;
@@ -160,7 +168,7 @@
       }
 
       .card {
-        background-color: $rojo;
+        background-color: $azul;
       }
     }
 
@@ -250,8 +258,11 @@
           text-align: center;
           padding: 20px 20px 10px 20px;
         }
-        .contentImg img {
+
+  
+        .iframe {
           width: 100%;
+        
           object-fit: cover;
           border: 2px white solid;
           border-top-right-radius: 40px;

@@ -13,13 +13,16 @@ const NuestrasCanciones = () => {
   useEffect(() => {
     setLoading(true);
     getSongs().then((data) => setOurSongs(data.data));
-    pageSongs().then((data) => setInfoPage(data.data));
-    setLoading(false);
+    pageSongs().then((data) => {
+      setInfoPage(data.data);
+      setLoading(false);
+    });
   }, []);
 
   return (
     <div className="nuestrasCanciones">
       {loading && <Loader />}
+
       <MenuMobil />
       <div className="arrow">
         <img onClick={() => navigate("/")} src="assets/atras.png" alt="" />
@@ -49,7 +52,32 @@ const NuestrasCanciones = () => {
                 <div className="card_container">
                   <div className="cardfront">
                     <div className="contentImg">
-                      <img src={item.portada?.url} alt="" />
+                      <iframe
+                        className="iframe"
+                        srcDoc={`
+                      <style>
+                          img{object-fit:cover}
+                          *{padding:0;margin:0;overflow:hidden}
+                          html,body{height:100%;}
+                          .img1{position:absolute;width:100vw;height:100%;top:0;bottom:0;margin:auto}
+                          .img2{position:absolute;width:50px;top:0;bottom:0;margin:auto; left:0;  right: 0;}
+                          span{position:absolute;width:100vw;height:100%;top:0;bottom:0;margin:auto}
+                          span{height:1.5em;text-align:center;font:120px/1.5 sans-serif;color:#FF4D00;text-shadow:0 0 0.5em black}
+                      </style>
+                      <a href=${"https://www.youtube.com/embed/RYVQ0ZzL-tY"}> 
+                          <img class = "img1" src=${item.portada?.url}>
+                          <img class = "img2"  src="assets/playlist.png" />
+                    
+                      </a>
+                        `}
+                        src={`${"https://www.youtube.com/embed/RYVQ0ZzL-tY"}`}
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        muted
+                        autoPlay
+                      ></iframe>
                     </div>
                     <h2 className="text1">{item.titulo}</h2>
                     <p className="text2"> {item.descripcion}</p>

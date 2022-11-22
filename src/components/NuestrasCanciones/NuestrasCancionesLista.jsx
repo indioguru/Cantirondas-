@@ -3,26 +3,30 @@ import { getSongs, pageSongs } from "../../api/api";
 import { useNavigate } from "react-router-dom";
 import MenuMobil from "../Menu/MenuMobil";
 import Footer from "../Footer/Footer";
+import Loader from "../Loader/Loader";
 const NuestrasCancionesLista = () => {
   const navigate = useNavigate();
 
   const [ourSongs, setOurSongs] = useState([]);
   const [infoPage, setInfoPage] = useState([]);
-
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
+    setLoading(true);
     getSongs().then((data) => setOurSongs(data.data));
-    pageSongs().then((data) => setInfoPage(data.data));
+    pageSongs().then((data) => {
+      setInfoPage(data.data);
+      setLoading(false);
+    });
   }, []);
-
-  console.log(infoPage);
 
   return (
     <div className="nuestrasCancionesLista">
       <MenuMobil />
+      {loading && <Loader />}
       <div className="arrow">
         <img
           onClick={() => navigate("/nuestrasCanciones")}
-          src="/public/assets/atras.png"
+          src="assets/atras.png"
           alt=""
         />
       </div>
