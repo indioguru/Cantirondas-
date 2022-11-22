@@ -35,6 +35,18 @@ const Descargables = () => {
           <p>{infoPage.descripcion}</p>
         </div>
 
+        <div className="buttonBackIcon">
+          <div
+            onClick={() => navigate("/descargablesLista")}
+            className="buttonBackIcon_content"
+          >
+            <img className="imgButton" src="/assets/lista.png" alt="" />
+            <h1 className="textButton">
+              VER <br /> LISTA
+            </h1>
+          </div>
+        </div>
+
         <div className="descargables_container_cards">
           {infoDownloads.map((item) => {
             return (

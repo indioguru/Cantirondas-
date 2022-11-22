@@ -329,10 +329,6 @@
       transition: scale, 0.4s ease;
     }
 
-    // .buttonDescargas button:nth-child(3n + 1){
-    //   background-color: $amarillo;
-    // }
-
     @media (hover: hover) {
       .buttonDescargas button:hover {
         background-color: $naranja;

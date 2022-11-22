@@ -31,6 +31,18 @@ const NuestrasCanciones = () => {
         <div className="logo">
           <img src="assets/logo.png" alt="" />
         </div>
+
+        <div className="buttonBackIcon">
+          <div
+            onClick={() => navigate("/nuestrasCancionesLista")}
+            className="buttonBackIcon_content"
+          >
+            <img className="imgButton" src="/assets/lista.png" alt="" />
+            <h1 className="textButton">
+              VER <br /> LISTA
+            </h1>
+          </div>
+        </div>
         <h1 className="title">{infoPage.titulo}</h1>
         <div className="nuestrasCanciones_container_destok">
           <div className="nuestrasCanciones_container_destok_one">

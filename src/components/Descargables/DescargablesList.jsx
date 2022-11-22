@@ -26,6 +26,19 @@ const DescargablesList = () => {
       {loading && <Loader />}
       <MenuMobil />
 
+      <div className="buttonBackIcon">
+        <div
+          onClick={() => navigate("/descargables")}
+          className="buttonBackIcon_content"
+        >
+          <img className="imgButton" src="/public/assets/tarjetas.png" alt="" />
+          <h1 className="textButton">
+            VER <br />
+            portadas
+          </h1>
+        </div>
+      </div>
+
       <div className="arrow">
         <img
           onClick={() => navigate("/descargables")}

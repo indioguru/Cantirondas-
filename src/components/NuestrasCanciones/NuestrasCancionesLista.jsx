@@ -30,6 +30,19 @@ const NuestrasCancionesLista = () => {
           alt=""
         />
       </div>
+
+      <div className="buttonBackIcon">
+        <div
+          onClick={() => navigate("/nuestrasCanciones")}
+          className="buttonBackIcon_content"
+        >
+          <img className="imgButton" src="/public/assets/tarjetas.png" alt="" />
+          <h1 className="textButton">
+            VER <br />
+            portadas
+          </h1>
+        </div>
+      </div>
       <div className="nuestrasCancionesLista_container">
         <div className="logo">
           <img src="assets/logo.png" alt="" />
