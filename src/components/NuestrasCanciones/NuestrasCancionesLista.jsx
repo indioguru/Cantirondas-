@@ -36,7 +36,7 @@ const NuestrasCancionesLista = () => {
           onClick={() => navigate("/nuestrasCanciones")}
           className="buttonBackIcon_content"
         >
-          <img className="imgButton" src="/public/assets/tarjetas.png" alt="" />
+          <img className="imgButton" src="/assets/tarjetas.png" alt="" />
           <h1 className="textButton">
             VER <br />
             portadas

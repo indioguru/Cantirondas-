@@ -60,23 +60,21 @@
       }
     }
 
-    @media (min-width: 800px){
-      .buttonBackIcon{
-        &_content{
+    @media (min-width: 800px) {
+      .buttonBackIcon {
+        &_content {
           width: 100px;
           height: 100px;
 
-          .imgButton{
+          .imgButton {
             top: 10px;
           }
 
-          .textButton{
+          .textButton {
             top: 20px;
           }
         }
-        
       }
-      
     }
   }
 
@@ -327,17 +325,15 @@
       &_container {
         position: relative;
         transition: scale, 0.4s ease;
-        // margin: 50px 0px;
         z-index: 2;
-        height: 420px;
-        margin: 0 auto;
-        max-width: 310px;
+
         .cardfront {
           border-radius: 50px;
           border: 3px white solid;
           height: 420px;
+          width: 310px;
           position: relative;
-
+          margin: 0 auto;
           .contentIcons {
             display: flex;
             justify-content: end;
@@ -409,7 +405,50 @@
             overflow: auto;
             height: 110px;
           }
+          
         }
+
+        @media (min-width: 1000px) {
+          .cardfront {
+            width: 420px;
+            height: 500px;
+
+            
+          .contentImg {
+            text-align: center;
+            padding: 30px 30px 10px 30px;
+          }
+
+            .iframe {
+              width: 100%;
+              height: 210px;
+              object-fit: cover;
+              border: 2px white solid;
+              border-top-right-radius: 40px;
+              border-bottom-right-radius: 40px;
+              border-top-left-radius: 40px;
+            }
+
+            .text1 {
+              font-size: 30px;
+            }
+
+            .text2 {
+              font-size: 20px;
+            }
+
+            .yotube {
+              width: 60px;
+              height: 60px;
+            }
+  
+            .spo {
+              width: 60px;
+              height: 60px;
+            }
+          }
+        }
+        
 
         .cardfront::after {
           content: "";
@@ -444,27 +483,29 @@
       &_anim {
         margin: 0 auto;
         transition: scale, 0.4s ease;
+        
       }
 
       &_anim button {
         background-color: $rojo;
         color: white;
-        width: 100%;
+
         border-radius: 40px;
         border: 3px white solid;
         position: relative;
         font-family: Arco;
         font-weight: 100;
         font-size: 25px;
-        width: 238px;
-        height: 54px;
+       
+        
       }
 
       @media (min-width: 900px) {
         &_anim button {
           font-size: 40px;
-          width: 394px;
-          height: 70px;
+          padding: 10px 30px 15px 30px;
+       
+          
         }
       }
 

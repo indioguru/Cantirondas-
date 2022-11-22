@@ -11,7 +11,7 @@ $verde-azul: #01b4bb;
 //Tarjetas
 $rojo: #fa5456;
 $azul: #0184bb;
-$verde: #01BB77;
+$verde: #01bb77;
 $amarillo: #f5d51e;
 // $otro: #2cc821;
 
@@ -31,6 +31,42 @@ $ancho-boton: 200px;
 .noScroll {
   overflow: hidden;
 }
+
+
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+::-webkit-scrollbar-button {
+  width: 100px;
+  height: 100px;
+}
+::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: 0px none #ffffff;
+  border-radius: 52px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #000000;
+}
+::-webkit-scrollbar-track {
+  background: #666666;
+  border: 0px none #ffffff;
+  border-radius: 43px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
 
 @import "./components//Home/home";
 @import "./components//Menu/MenuMobile.scss";

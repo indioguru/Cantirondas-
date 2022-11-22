@@ -11,8 +11,8 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
-        margin-bottom: 150px;
-        margin-top: 100px;
+        margin-bottom: 250px;
+        margin-top: 150px;
         &_two {
           width: 50%;
         }
@@ -26,7 +26,7 @@
           .contetButtonPlaylistDestok button {
             background-color: $rojo;
             color: white;
-            padding: 10px 20px 15px 20px;
+            padding: 10px 40px 15px 40px;
             border: none;
             border-radius: 40px;
             border: 3px white solid;
@@ -74,9 +74,9 @@
     }
 
     .contetButtonPlaylist button {
-      background-color: $morado;
+      background-color: $rojo;
       color: white;
-      padding: 10px 20px;
+      padding: 10px 40px 15px 40px;
       border: none;
       border-radius: 40px;
       border: 2px white solid;
@@ -180,7 +180,7 @@
     }
     .contentCard {
       position: relative;
-      margin-top: 60px;
+      margin-top: 100px;
       margin-bottom: 50px;
       transition: scale, 0.4s ease;
       .card::after {
@@ -210,7 +210,6 @@
         border: 2px white solid;
         height: 420px;
         width: 310px;
-
         position: relative;
         margin: 0 auto;
         transition: width, height, 0.4s 0s ease;
@@ -260,7 +259,6 @@
 
         .iframe {
           width: 100%;
-
           object-fit: cover;
           border: 2px white solid;
           border-top-right-radius: 40px;
@@ -285,6 +283,46 @@
           font-weight: 100;
           overflow: auto;
           height: 110px;
+        }
+      }
+
+      @media (min-width: 1000px) {
+        .card {
+          width: 420px;
+          height: 500px;
+
+          .contentImg {
+            text-align: center;
+            padding: 30px 30px 10px 30px;
+          }
+
+          .iframe {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+            border: 2px white solid;
+            border-top-right-radius: 40px;
+            border-bottom-right-radius: 40px;
+            border-top-left-radius: 40px;
+          }
+
+          .text1 {
+            font-size: 30px;
+          }
+
+          .text2 {
+            font-size: 20px;
+          }
+
+          .yotube {
+            width: 60px;
+            height: 60px;
+          }
+
+          .spo {
+            width: 60px;
+            height: 60px;
+          }
         }
       }
     }

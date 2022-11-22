@@ -195,22 +195,19 @@
       &_anim button {
         background-color: $morado;
         color: white;
-        width: 100%;
         border-radius: 40px;
         border: 3px white solid;
         position: relative;
         font-family: Arco;
         font-weight: 100;
         font-size: 25px;
-        width: 238px;
-        height: 54px;
+        padding: 10px 30px 15px 30px;
       }
 
       @media (min-width: 900px) {
         &_anim button {
           font-size: 40px;
-          width: 394px;
-          height: 70px;
+        
         }
       }
 
