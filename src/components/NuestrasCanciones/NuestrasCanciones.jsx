@@ -23,17 +23,8 @@ const NuestrasCanciones = () => {
       {loading && <Loader />}
 
       <div className="nuestrasCanciones_container">
-<<<<<<< HEAD
-  
-      <div className="arrow">
-        <img onClick={() => navigate("/")} src="assets/atras.png" alt="" />
-      </div>
-        <div className="logo">
-          <img src="assets/logo.png" alt="" />
-=======
         <div className="arrow">
           <img onClick={() => navigate("/")} src="assets/atras.png" alt="" />
->>>>>>> ee4c338ef53b9e6d754fd66fe43d6851d88ad19f
         </div>
         <div className="buttonBackIcon">
           <div
