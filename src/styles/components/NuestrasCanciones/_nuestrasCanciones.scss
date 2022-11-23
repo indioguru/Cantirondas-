@@ -2,13 +2,14 @@
   background-color: $morado;
 
   .buttonBackIcon {
+   
     &_content {
       background-color: $verde-azul;
       width: 80px;
       height: 80px;
-      position: fixed;
       border-radius: 50%;
       z-index: 5;
+      position: fixed;
       right: 0;
       bottom: 0;
       margin: 20px;
@@ -100,6 +101,7 @@
   @media (min-width: 800px) {
     .arrow {
       top: 20px;
+      margin-left: 0px;
     }
     .arrow img {
       width: 75px;
@@ -115,7 +117,6 @@
 
     @media (min-width: 600px) {
       &_destok {
-        
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -127,22 +128,6 @@
         &_two {
           width: 50%;
         }
-      }
-    }
-    .logo {
-      text-align: end;
-    }
-
-    .logo img {
-      width: 240px;
-      height: 40px;
-      margin-bottom: 30px;
-    }
-
-    @media (min-width: 700px) {
-      .logo img {
-        width: 477px;
-        height: 80px;
       }
     }
 
@@ -185,7 +170,7 @@
     .title {
       text-align: center;
       color: white;
-      margin-top: 20px;
+      margin-top: 80px;
       text-transform: uppercase;
       font-family: Arco;
       font-weight: 100;
@@ -204,6 +189,7 @@
     @media (min-width: 900px) {
       .title {
         font-size: 60px;
+        margin-top: 140px;
       }
 
       .descripton {
@@ -407,7 +393,6 @@
             overflow: auto;
             height: 110px;
           }
-          
         }
 
         @media (min-width: 1000px) {
@@ -415,11 +400,10 @@
             width: 420px;
             height: 500px;
 
-            
-          .contentImg {
-            text-align: center;
-            padding: 30px 30px 10px 30px;
-          }
+            .contentImg {
+              text-align: center;
+              padding: 30px 30px 10px 30px;
+            }
 
             .iframe {
               width: 100%;
@@ -443,14 +427,13 @@
               width: 60px;
               height: 60px;
             }
-  
+
             .spo {
               width: 60px;
               height: 60px;
             }
           }
         }
-        
 
         .cardfront::after {
           content: "";
@@ -485,29 +468,24 @@
       &_anim {
         margin: 0 auto;
         transition: scale, 0.4s ease;
-        
       }
 
       &_anim button {
         background-color: $rojo;
         color: white;
-
+        padding: 10px 30px 15px 30px;
         border-radius: 40px;
         border: 3px white solid;
         position: relative;
         font-family: Arco;
         font-weight: 100;
         font-size: 25px;
-       
-        
       }
 
       @media (min-width: 900px) {
         &_anim button {
           font-size: 40px;
           padding: 10px 30px 15px 30px;
-       
-          
         }
       }
 
