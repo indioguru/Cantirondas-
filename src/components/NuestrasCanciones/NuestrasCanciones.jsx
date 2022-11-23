@@ -22,11 +22,11 @@ const NuestrasCanciones = () => {
     <div className="nuestrasCanciones">
       {loading && <Loader />}
 
+      <div className="nuestrasCanciones_container">
   
       <div className="arrow">
         <img onClick={() => navigate("/")} src="assets/atras.png" alt="" />
       </div>
-      <div className="nuestrasCanciones_container">
         <div className="logo">
           <img src="assets/logo.png" alt="" />
         </div>
