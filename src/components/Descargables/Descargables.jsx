@@ -21,13 +21,10 @@ const Descargables = () => {
   return (
     <div className="descargables">
       {loading && <Loader />}
-      <div className="arrow">
-        <img onClick={() => navigate("/")} src="assets/atras.png" alt="" />
-      </div>
 
       <div className="descargables_container">
-        <div className="descargables_container_logo">
-          <img src="assets/logo.png" alt="" />
+        <div className="arrow">
+          <img onClick={() => navigate("/")} src="assets/atras.png" alt="" />
         </div>
 
         <div className="descargables_container_info">

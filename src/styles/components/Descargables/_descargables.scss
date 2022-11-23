@@ -82,7 +82,7 @@
     top: 0;
     margin-top: 70px;
     margin-left: 20px;
-    z-index: 2;
+    z-index: 3;
     transition: scale, 0.4s ease;
   }
 
@@ -99,6 +99,7 @@
   @media (min-width: 800px) {
     .arrow {
       top: 20px;
+      margin-left: 0px;
     }
     .arrow img {
       width: 75px;
@@ -109,22 +110,7 @@
     padding: 20px;
     margin: 0 auto;
     max-width: 1200px;
-    &_logo {
-      text-align: end;
-    }
 
-    &_logo img {
-      width: 240px;
-      height: 40px;
-      margin-bottom: 30px;
-    }
-
-    @media (min-width: 700px) {
-      &_logo img {
-        width: 477px;
-        height: 80px;
-      }
-    }
     &_info h1 {
       color: white;
       margin-bottom: 40px;
@@ -132,22 +118,23 @@
       font-family: Arco;
       font-weight: 100;
       text-align: center;
+      padding-top: 80px;
     }
 
     &_info p {
       color: white;
-     
+
       font-family: Conforta;
       font-weight: 100;
       font-size: 15px;
       margin-bottom: 80px;
     }
 
-
     @media (min-width: 900px) {
       &_info h1 {
         text-align: center;
         font-size: 60px;
+        padding-top: 140px;
       }
 
       &_info p {
@@ -156,7 +143,6 @@
       }
     }
 
-    
     @media (min-width: 760px) {
       &_cards {
         display: flex;
@@ -332,7 +318,6 @@
               text-align: center;
             }
 
-           
             .buttonDescargar button {
               color: $rojo;
               border: none;
@@ -341,15 +326,15 @@
               border-radius: 40px;
               font-family: Arco;
               font-weight: 100;
-              transition: scale, .4s ease;
+              transition: scale, 0.4s ease;
               font-size: 30px;
             }
 
-            @media (hover:hover){
-              .buttonDescargar button:hover{
+            @media (hover: hover) {
+              .buttonDescargar button:hover {
                 transform: scale(1.15);
                 cursor: pointer;
-                transition: scale, .4s ease;
+                transition: scale, 0.4s ease;
               }
             }
 
@@ -443,7 +428,7 @@
         font-family: Arco;
         font-weight: 100;
         font-size: 25px;
-       
+        padding: 10px 30px 15px 30px;
       }
 
       @media (min-width: 900px) {

@@ -92,6 +92,7 @@
   @media (min-width: 800px) {
     .arrow {
       top: 20px;
+      margin-left: 0px;
     }
     .arrow img {
       width: 75px;
@@ -102,23 +103,6 @@
     max-width: 1200px;
     margin: 0 auto;
 
-    &_logo {
-      text-align: end;
-    }
-
-    &_logo img {
-      width: 240px;
-      height: 40px;
-      margin-bottom: 30px;
-    }
-
-    @media (min-width: 700px) {
-      &_logo img {
-        width: 477px;
-        height: 80px;
-      }
-    }
-
     &_title h1 {
       color: white;
       font-family: Arco;
@@ -126,6 +110,7 @@
       font-size: 35px;
       margin-bottom: 40px;
       text-align: center;
+      margin-top: 80px;
     }
 
     .description {
@@ -140,6 +125,7 @@
       &_title h1 {
         text-align: center;
         font-size: 60px;
+        margin-top: 140px;
       }
 
       .description {

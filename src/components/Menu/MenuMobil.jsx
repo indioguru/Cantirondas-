@@ -12,7 +12,7 @@ const MenuMobil = ({ showMenu = { showMenu } }) => {
 
   const setTime = () => {
     setIsOpenMenu(!isOpenMenu);
-    console.log("Funciona");
+  
   };
 
   return (

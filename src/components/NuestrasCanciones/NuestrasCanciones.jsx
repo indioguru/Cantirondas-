@@ -22,15 +22,10 @@ const NuestrasCanciones = () => {
     <div className="nuestrasCanciones">
       {loading && <Loader />}
 
-  
-      <div className="arrow">
-        <img onClick={() => navigate("/")} src="assets/atras.png" alt="" />
-      </div>
       <div className="nuestrasCanciones_container">
-        <div className="logo">
-          <img src="assets/logo.png" alt="" />
+        <div className="arrow">
+          <img onClick={() => navigate("/")} src="assets/atras.png" alt="" />
         </div>
-
         <div className="buttonBackIcon">
           <div
             onClick={() => navigate("/nuestrasCancionesLista")}
