@@ -63,9 +63,9 @@ const HomeCanciones = () => {
               <div className="anim">
                 {allSongs.map((item) => {
                   return (
-                    <div className="conterAll">
+                    <div className="conterAll" key={item.id}>
                       {item.destacado ? (
-                        <SwiperSlide className="containerCard" key={item.id}>
+                        <SwiperSlide className="containerCard" >
                           <div className="contentCard">
                             <div className="card">
                               <div className="contentImg">

@@ -131,7 +131,6 @@
       }
     }
 
-
     .card:nth-child(3n + 1) {
       .cardfront::after {
         background-color: $naranja;
@@ -223,7 +222,7 @@
     .card {
       margin-top: 50px;
       margin-bottom: 250px;
-     padding-top: 20px;
+      padding-top: 20px;
       @media (hover: hover) {
         &_container:hover {
           transform: scale(1.15);

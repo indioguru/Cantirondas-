@@ -78,7 +78,7 @@ const NuestrasCanciones = () => {
                       </style>
                       <a href=${item.url_YOUTUBE}> 
                           <img class = "img1" src=${item.portada?.url}>
-                          <img class = "img2"  src="assets/playlist.png" />
+                          <img class = "img2" src="assets/playlist.png" />
                     
                       </a>
                         `}
@@ -96,14 +96,14 @@ const NuestrasCanciones = () => {
 
                     <div className="contentIcons">
                       {item.url_YOUTUBE ? (
-                        <a href={url_YOUTUBE}>
+                        <a href={item.url_YOUTUBE}>
                           <div className="yotube"></div>
                         </a>
                       ) : (
                         ""
                       )}
                       {item.url_SPOTIFY ? (
-                        <a href={url_SPOTIFY}>
+                        <a href={item.url_SPOTIFY}>
                           <div className="spo"></div>
                         </a>
                       ) : (
