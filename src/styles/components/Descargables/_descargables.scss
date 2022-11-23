@@ -332,6 +332,7 @@
               text-align: center;
             }
 
+           
             .buttonDescargar button {
               color: $rojo;
               border: none;
@@ -340,8 +341,18 @@
               border-radius: 40px;
               font-family: Arco;
               font-weight: 100;
+              transition: scale, .4s ease;
               font-size: 30px;
             }
+
+            @media (hover:hover){
+              .buttonDescargar button:hover{
+                transform: scale(1.15);
+                cursor: pointer;
+                transition: scale, .4s ease;
+              }
+            }
+
             .contentIcons {
               text-align: end;
               margin: 10px;
@@ -357,6 +368,7 @@
             }
             .contentImg img {
               width: 100%;
+              height: 170px;
               object-fit: cover;
               border: 3px white solid;
               border-top-right-radius: 40px;
@@ -376,7 +388,7 @@
             .text2 {
               color: white;
               word-wrap: break-word;
-              padding: 20px 40px 30px 30px;
+              padding: 0px 10px;
               font-family: Conforta;
               font-weight: 100;
               overflow: auto;
@@ -398,7 +410,7 @@
                 border-top-left-radius: 40px;
               }
               .text1 {
-                font-size: 30px;
+                font-size: 22px;
                 height: 70px;
               }
 

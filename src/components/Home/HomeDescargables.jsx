@@ -22,6 +22,8 @@ const HomeDescargables = () => {
     });
   }, []);
 
+  console.log(downloadsInfo);
+
   const changeBackground = () => {
     const colors = ["#01BB77", "#0184bb", "#fa5456"];
 
@@ -61,9 +63,9 @@ const HomeDescargables = () => {
           >
             {downloadsInfo.map((item) => {
               return (
-                <div className="conterAll">
+                <div className="conterAll" key={item.id}>
                   {item.destacado ? (
-                    <SwiperSlide className="card" key={item.id}>
+                    <SwiperSlide className="card">
                       {item.destacado}
                       <div className="destok_one">
                         <div className="card_container">
@@ -79,7 +81,13 @@ const HomeDescargables = () => {
 
                       <div className="destok_two">
                         <div className="buttonDescargas">
-                          <button>DESCARGAR</button>
+                          <button
+                            onClick={() => 
+                              <a href={`${item.descargable.url}`} download></a>
+                            }
+                          >
+                            DESCARGAR
+                          </button>
                         </div>
 
                         <div className="buttonVerTodo">

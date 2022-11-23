@@ -7,7 +7,6 @@ const Footer = ({ color }) => {
   const coloBackground = () => {
     const back = document.querySelector(".footer");
     back.style.backgroundColor = `${color}`;
-    console.log(back);
   };
 
   useEffect(() => {
@@ -22,11 +21,6 @@ const Footer = ({ color }) => {
           <div className="footer_container_items_spotify"></div>
           <div className="footer_container_items_instagram"></div>
           <div className="footer_container_items_facebook"></div>
-
-          {/* <img src="assets/Botones redes sociales/youtube.png" alt="" />
-          <img src="assets/Botones redes sociales/spotify.png" alt="" />
-          <img src="assets/Botones redes sociales/instagram.png" alt="" />
-          <img src="assets/Botones redes sociales/facebook.png" alt="" /> */}
         </div>
         <div className="footer_container_info">
           <h1 onClick={() => navigate("/nuestrasCanciones")}>

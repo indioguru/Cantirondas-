@@ -59,7 +59,13 @@ const Descargables = () => {
                     <h2 className="text1">{item.titulo}</h2>
                     <p className="text2"> {item.descripcion}</p>
                     <div className="buttonDescargar">
-                      <button>DESCARGAR</button>
+                      <button
+                        onClick={() => (
+                          <a href={`${item.descargable.url}`} download></a>
+                        )}
+                      >
+                        DESCARGAR
+                      </button>
                     </div>
                   </div>
                 </div>

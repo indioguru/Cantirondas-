@@ -96,14 +96,22 @@ const NuestrasCanciones = () => {
 
                     <div className="contentIcons">
                       {item.url_YOUTUBE ? (
-                        <a href={item.url_YOUTUBE}>
+                        <a
+                          href={item.url_YOUTUBE}
+                          target={"_blank"}
+                          rel="noopener noreferrer"
+                        >
                           <div className="yotube"></div>
                         </a>
                       ) : (
                         ""
                       )}
                       {item.url_SPOTIFY ? (
-                        <a href={item.url_SPOTIFY}>
+                        <a
+                          href={item.url_SPOTIFY}
+                          target={"_blank"}
+                          rel="noopener noreferrer"
+                        >
                           <div className="spo"></div>
                         </a>
                       ) : (

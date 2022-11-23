@@ -65,7 +65,7 @@ const HomeCanciones = () => {
                   return (
                     <div className="conterAll" key={item.id}>
                       {item.destacado ? (
-                        <SwiperSlide className="containerCard" >
+                        <SwiperSlide className="containerCard" key={item.id} >
                           <div className="contentCard">
                             <div className="card">
                               <div className="contentImg">
@@ -101,14 +101,14 @@ const HomeCanciones = () => {
 
                               <div className="contentIcons">
                                 {item.url_YOUTUBE ? (
-                                  <a href={item.url_YOUTUBE}>
+                                  <a href={item.url_YOUTUBE}  target={"_blank"} rel="noopener noreferrer">
                                     <div className="yotube"></div>
                                   </a>
                                 ) : (
                                   ""
                                 )}
                                 {item.url_SPOTIFY ? (
-                                  <a href={item.url_SPOTIFY}>
+                                  <a href={item.url_SPOTIFY}  target={"_blank"} rel="noopener noreferrer">
                                     <div className="spo"></div>
                                   </a>
                                 ) : (

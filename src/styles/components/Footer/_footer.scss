@@ -1,16 +1,11 @@
 .footer {
   &_container {
     padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
-    justify-content: space-around;
+
     &_items {
       display: flex;
-      justify-content: center;
-      flex-basis: 50%;
-      order: -5;
       &_youtube {
         width: 50px;
         margin: 5px;
@@ -51,14 +46,8 @@
       margin: 10px;
     }
 
-    &_info {
-      margin-top: 30px;
-      margin-bottom: 100px;
-      order: 5;
-    }
-
     &_info h1 {
-      padding: 10px 40px 10px 10px;
+      padding: 10px 0px;
       font-size: 26px;
       color: white;
       font-family: Arco;
@@ -66,7 +55,7 @@
       transition: scale, 0.4s ease;
     }
 
-    @media (min-width: 900px) {
+    @media (min-width: 800px) {
       &_info h1 {
         font-size: 30px;
       }
@@ -110,36 +99,36 @@
     }
   }
 
-  @media (min-width: 740px) {
+  @media (min-width: 800px) {
     &_container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 50px 0px;
       &_items {
-        order: 5;
-        margin-top: 20px;
+        order: 2;
+        margin: unset;
         &_youtube {
           width: 80px;
-
           height: 80px;
         }
 
         &_spotify {
           width: 80px;
-
           height: 80px;
         }
         &_instagram {
           width: 80px;
-
           height: 80px;
         }
         &_facebook {
           width: 80px;
-
           height: 80px;
         }
       }
 
-      &_info {
-        order: -5;
+      &_info{
+        order: 1;
       }
     }
   }
