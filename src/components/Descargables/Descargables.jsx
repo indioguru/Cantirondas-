@@ -31,7 +31,7 @@ const Descargables = () => {
           <h1>{infoPage.titulo}</h1>
           <p>{infoPage.descripcion}</p>
         </div>
-
+      
         <div className="buttonBackIcon">
           <div
             onClick={() => navigate("/descargablesLista")}
