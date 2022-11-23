@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getSongs, pageSongs } from "../../api/api";
 import { useNavigate } from "react-router-dom";
-import MenuMobil from "../Menu/MenuMobil";
 import Footer from "../Footer/Footer";
 import Loader from "../Loader/Loader";
 const NuestrasCanciones = () => {
@@ -23,7 +22,7 @@ const NuestrasCanciones = () => {
     <div className="nuestrasCanciones">
       {loading && <Loader />}
 
-      <MenuMobil />
+  
       <div className="arrow">
         <img onClick={() => navigate("/")} src="assets/atras.png" alt="" />
       </div>

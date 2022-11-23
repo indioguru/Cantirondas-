@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { pageDownloads, downloads } from "../../api/api";
 import Footer from "../Footer/Footer";
 import Loader from "../Loader/Loader";
-import MenuMobil from "../Menu/MenuMobil";
+
 const Descargables = () => {
   const navigate = useNavigate();
   const [infoPage, setInfoPage] = useState([]);
@@ -24,7 +24,7 @@ const Descargables = () => {
       <div className="arrow">
         <img onClick={() => navigate("/")} src="assets/atras.png" alt="" />
       </div>
-      <MenuMobil />
+
       <div className="descargables_container">
         <div className="descargables_container_logo">
           <img src="assets/logo.png" alt="" />

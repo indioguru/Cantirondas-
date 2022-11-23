@@ -32,7 +32,6 @@ $ancho-boton: 200px;
   overflow: hidden;
 }
 
-
 ::-webkit-scrollbar {
   width: 2px;
   height: 2px;
@@ -67,6 +66,20 @@ $ancho-boton: 200px;
   background: transparent;
 }
 
+.logo {
+  position: absolute;
+  max-width: 1200px;
+  width: 90%;
+  margin: 0px auto;
+  left: 0;
+  right: 0;
+
+  .img_logo {
+    width: 50%;
+    position: absolute;
+    right: 0;
+  }
+}
 
 @import "./components//Home/home";
 @import "./components//Menu/MenuMobile.scss";
