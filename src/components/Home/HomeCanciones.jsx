@@ -37,7 +37,7 @@ const HomeCanciones = () => {
         <div className="home_songs_container_destok">
           <div className="home_songs_container_destok_one">
             <h1>CANCIONES DESTACADAS</h1>
-            <Media query="(min-width: 600px)">
+            <Media query="(min-width: 750px)">
               {(resolution) => {
                 return resolution ? (
                   <div className="contetButtonPlaylistDestok">
@@ -81,13 +81,13 @@ const HomeCanciones = () => {
                           span{position:absolute;width:100vw;height:100%;top:0;bottom:0;margin:auto}
                           span{height:1.5em;text-align:center;font:120px/1.5 sans-serif;color:#FF4D00;text-shadow:0 0 0.5em black}
                       </style>
-                      <a href=${"https://www.youtube.com/embed/RYVQ0ZzL-tY"}> 
+                      <a href=${item.url_YOUTUBE}> 
                           <img class = "img1" src=${item.portada?.url}>
                           <img class = "img2"  src="assets/playlist.png" />
                     
                       </a>
                         `}
-                                  src={`${"https://www.youtube.com/embed/RYVQ0ZzL-tY"}`}
+                                  src={`${item.url_YOUTUBE}`}
                                   title="YouTube video player"
                                   frameBorder="0"
                                   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -100,13 +100,17 @@ const HomeCanciones = () => {
                               <p className="text2">{item.descripcion}</p>
 
                               <div className="contentIcons">
-                                {item.url_SPOTIFY ? (
-                                  <div className="yotube"></div>
+                                {item.url_YOUTUBE ? (
+                                  <a href={item.url_YOUTUBE}>
+                                    <div className="yotube"></div>
+                                  </a>
                                 ) : (
                                   ""
                                 )}
-                                {item.url_YOUTUBE ? (
-                                  <div className="spo"></div>
+                                {item.url_SPOTIFY ? (
+                                  <a href={item.url_SPOTIFY}>
+                                    <div className="spo"></div>
+                                  </a>
                                 ) : (
                                   ""
                                 )}
@@ -125,7 +129,7 @@ const HomeCanciones = () => {
           </div>
         </div>
 
-        <Media query="(max-width: 600px)">
+        <Media query="(max-width: 750px)">
           {(resolution) => {
             return resolution ? (
               <div className="contetButtonPlaylist">

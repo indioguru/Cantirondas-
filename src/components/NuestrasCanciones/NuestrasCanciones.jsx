@@ -76,13 +76,13 @@ const NuestrasCanciones = () => {
                           span{position:absolute;width:100vw;height:100%;top:0;bottom:0;margin:auto}
                           span{height:1.5em;text-align:center;font:120px/1.5 sans-serif;color:#FF4D00;text-shadow:0 0 0.5em black}
                       </style>
-                      <a href=${"https://www.youtube.com/embed/RYVQ0ZzL-tY"}> 
+                      <a href=${item.url_YOUTUBE}> 
                           <img class = "img1" src=${item.portada?.url}>
                           <img class = "img2"  src="assets/playlist.png" />
                     
                       </a>
                         `}
-                        src={`${"https://www.youtube.com/embed/RYVQ0ZzL-tY"}`}
+                        src={`${item.url_YOUTUBE}`}
                         title="YouTube video player"
                         frameBorder="0"
                         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -95,8 +95,20 @@ const NuestrasCanciones = () => {
                     <p className="text2"> {item.descripcion}</p>
 
                     <div className="contentIcons">
-                      {item.url_SPOTIFY ? <div className="yotube"></div> : ""}
-                      {item.url_YOUTUBE ? <div className="spo"></div> : ""}
+                      {item.url_YOUTUBE ? (
+                        <a href={url_YOUTUBE}>
+                          <div className="yotube"></div>
+                        </a>
+                      ) : (
+                        ""
+                      )}
+                      {item.url_SPOTIFY ? (
+                        <a href={url_SPOTIFY}>
+                          <div className="spo"></div>
+                        </a>
+                      ) : (
+                        ""
+                      )}
                     </div>
                   </div>
                 </div>

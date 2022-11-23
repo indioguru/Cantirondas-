@@ -6,7 +6,7 @@
     max-width: 1200px;
     margin: 0 auto;
     @import "/src/styles/components/StylesSwipper/swipperCanciones";
-    @media (min-width: 600px) {
+    @media (min-width: 750px) {
       &_destok {
         display: flex;
         align-items: center;

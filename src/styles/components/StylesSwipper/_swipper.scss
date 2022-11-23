@@ -16,7 +16,7 @@
   text-align: center;
   transition: 300ms opacity;
   transform: translate3d(0, 0, 0);
-  top: -630px;
+  top: -750px;
   z-index: 15;
 }
 
@@ -46,7 +46,7 @@
 
 @media (max-width: 750px) {
   .swiper-pagination {
-    top: -790px;
+    top: -990px;
   }
   .swiper-button-prev:after,
   .swiper-rtl .swiper-button-next:after {

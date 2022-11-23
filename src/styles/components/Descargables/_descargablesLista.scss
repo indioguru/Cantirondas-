@@ -99,7 +99,7 @@
   }
   &_container {
     padding: 20px;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
 
     &_logo {
@@ -107,8 +107,16 @@
     }
 
     &_logo img {
-      width: 70%;
-      max-width: 400px;
+      width: 240px;
+      height: 40px;
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: 700px) {
+      &_logo img {
+        width: 477px;
+        height: 80px;
+      }
     }
 
     &_title h1 {
@@ -116,17 +124,16 @@
       font-family: Arco;
       font-weight: 100;
       font-size: 35px;
+      margin-bottom: 40px;
       text-align: center;
     }
 
     .description {
       color: white;
-      padding: 10px;
       font-family: Conforta;
       font-weight: 100;
       font-size: 15px;
-      margin-top: 20px;
-      margin-bottom: 40px;
+      margin-bottom: 80px;
     }
 
     @media (min-width: 900px) {
@@ -173,7 +180,6 @@
       @media (min-width: 900px) {
         &_anim button {
           font-size: 40px;
-        
         }
       }
 
@@ -223,7 +229,7 @@
         }
       }
     }
-    
+
     &_info {
       margin-top: 120px;
       margin-bottom: 40px;

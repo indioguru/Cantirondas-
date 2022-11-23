@@ -121,6 +121,7 @@
       font-weight: 100;
       font-size: 35px;
       margin-top: 150px;
+      margin-bottom: 30px;
     }
 
     @media (min-width: 900px) {
@@ -130,9 +131,6 @@
       }
     }
 
-    .mySwiper {
-      margin-top: 20px;
-    }
 
     .card:nth-child(3n + 1) {
       .cardfront::after {
@@ -224,20 +222,23 @@
 
     .card {
       margin-top: 50px;
-      margin-bottom: 50px;
+      margin-bottom: 250px;
+     padding-top: 20px;
+      @media (hover: hover) {
+        &_container:hover {
+          transform: scale(1.15);
+          transition: scale, 0.4s ease;
+        }
+      }
 
-      // @media (hover: hover) {
-      //   .cardfront:hover {
-      //     height: 450px;
-      //     width: 340px;
-      //     transition: width, height, 0.4s ease;
-      //   }
-      // }
       &_container {
         margin-top: 30px;
         z-index: 2;
+        height: 420px;
+        width: 310px;
 
-        // min-height: 500px;
+        transition: scale, 0.4s ease;
+
         .cardfront::after {
           content: "";
           display: block;
@@ -337,6 +338,12 @@
               height: 140px;
             }
           }
+        }
+      }
+
+      @media (max-width: 750px) {
+        &_container {
+          margin: 0 auto;
         }
       }
     }

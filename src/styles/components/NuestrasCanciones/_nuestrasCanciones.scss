@@ -115,16 +115,17 @@
 
     @media (min-width: 600px) {
       &_destok {
-        margin-top: 20px;
+        
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        margin-bottom: 20px;
         &_one {
           width: 50%;
         }
 
         &_two {
-          width: 40%;
+          width: 50%;
         }
       }
     }
@@ -135,6 +136,7 @@
     .logo img {
       width: 240px;
       height: 40px;
+      margin-bottom: 30px;
     }
 
     @media (min-width: 700px) {
@@ -183,7 +185,7 @@
     .title {
       text-align: center;
       color: white;
-      margin-top: 40px;
+      margin-top: 20px;
       text-transform: uppercase;
       font-family: Arco;
       font-weight: 100;
@@ -300,7 +302,7 @@
         flex-wrap: wrap;
         justify-content: space-around;
         margin: 0 auto;
-        margin-bottom: 200px;
+        margin-bottom: 250px;
       }
 
       .card {
