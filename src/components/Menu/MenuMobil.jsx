@@ -33,7 +33,7 @@ const MenuMobil = ({ showMenu = { showMenu } }) => {
             </div>
 
             <div className="prueba">
-              <div className="logo">
+              <div className="logoMenu">
                 <img src="assets/logo.png" alt="" />
               </div>
 

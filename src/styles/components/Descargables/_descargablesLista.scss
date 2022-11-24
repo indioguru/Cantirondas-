@@ -72,11 +72,9 @@
 
   .arrow {
     position: fixed;
-    top: 0;
-    margin-top: 70px;
-    margin-left: 20px;
-    z-index: 2;
-    transition: scale, 0.4s ease;
+    margin-left: 5%;
+    top: 60px;
+    z-index: 5;
   }
 
   .arrow:hover {
@@ -86,16 +84,27 @@
   }
 
   .arrow img {
-    width: 45px;
+    width: 40px;
   }
 
   @media (min-width: 800px) {
     .arrow {
-      top: 20px;
-      margin-left: 0px;
+      top: 100px;
     }
     .arrow img {
       width: 75px;
+    }
+  }
+
+  @media (min-width: 1250px) {
+    .arrow {
+      margin-left: 3%;
+    }
+  }
+
+  @media (min-width: 1300px) {
+    .arrow {
+      margin-left: 0;
     }
   }
   &_container {
@@ -125,7 +134,7 @@
       &_title h1 {
         text-align: center;
         font-size: 60px;
-        margin-top: 140px;
+        margin-top: 160px;
       }
 
       .description {
@@ -217,14 +226,22 @@
     }
 
     &_info {
-      margin-top: 120px;
+      margin-top: 80px;
       margin-bottom: 40px;
+
       .listDownload h1 {
         color: white;
         padding: 10px;
         margin-top: 10px;
         font-family: Conforta;
-        font-weight: 100;
+
+        font-size: 20px;
+      }
+
+      @media (min-width: 999px) {
+        .listDownload h1 {
+          font-size: 30px;
+        }
       }
 
       @media (hover: hover) {
@@ -238,15 +255,11 @@
       &_info {
         display: flex;
         flex-wrap: wrap;
-
-        .listDownload:nth-child(2n + 1) {
-          flex-basis: 50%;
-          padding-left: 100px;
-        }
-
-        .listDownload:nth-child(2n + 2) {
-          flex-basis: 50%;
-          padding-left: 100px;
+        justify-content: space-between;
+        margin-right: 10px;
+        margin-left: 10px;
+        .listDownload {
+          flex-basis: 45%;
         }
       }
     }

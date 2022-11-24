@@ -70,14 +70,21 @@ $ancho-boton: 200px;
   position: absolute;
   max-width: 1200px;
   width: 90%;
-  margin: 0px auto;
-  left: 0;
   right: 0;
-
+  left: 0;
+  margin: 0 auto;
   .img_logo {
     width: 80%;
     position: absolute;
+    z-index: 2;
     right: 0;
+    padding-top: 20px;
+  }
+
+  @media (hover: hover) {
+    .img_logo:hover {
+      cursor: pointer;
+    }
   }
 
   @media (min-width: 600px) {
