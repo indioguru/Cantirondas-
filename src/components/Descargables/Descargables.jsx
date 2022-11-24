@@ -22,7 +22,6 @@ const Descargables = () => {
     <div className="descargables">
       {loading && <Loader />}
       <div className="descargables_container">
-
         <div className="arrow">
           <img onClick={() => navigate("/")} src="assets/atras.png" alt="" />
         </div>
@@ -56,13 +55,13 @@ const Descargables = () => {
                     <h2 className="text1">{item.titulo}</h2>
                     <p className="text2"> {item.descripcion}</p>
                     <div className="buttonDescargar">
-                      <button
-                        onClick={() => (
-                          <a href={`${item.descargable.url}`} download></a>
-                        )}
+                      <a
+                        download="logo"
+                        href={item.descargable.url}
+                        title="Imagen"
                       >
                         DESCARGAR
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </div>

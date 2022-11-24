@@ -66,7 +66,6 @@
     }
   }
 
-
   .arrow {
     position: fixed;
     top: 0;
@@ -87,7 +86,7 @@
   }
 
   @media (min-width: 800px) {
-    .arrow{
+    .arrow {
       top: 100px;
     }
     .arrow img {
@@ -106,7 +105,7 @@
       margin-left: 0;
     }
   }
-  
+
   &_container {
     padding: 20px;
     margin: 0 auto;
@@ -319,9 +318,10 @@
 
             .buttonDescargar {
               text-align: center;
+              transition: scale, 0.4s ease;
             }
 
-            .buttonDescargar button {
+            .buttonDescargar a {
               color: $rojo;
               border: none;
               background-color: unset;
@@ -329,12 +329,13 @@
               border-radius: 40px;
               font-family: Arco;
               font-weight: 100;
-              transition: scale, 0.4s ease;
+              text-decoration: none;
+
               font-size: 30px;
             }
 
             @media (hover: hover) {
-              .buttonDescargar button:hover {
+              .buttonDescargar:hover {
                 transform: scale(1.15);
                 cursor: pointer;
                 transition: scale, 0.4s ease;
