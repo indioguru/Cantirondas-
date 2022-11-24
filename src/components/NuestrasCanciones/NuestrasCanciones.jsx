@@ -6,6 +6,7 @@ import Loader from "../Loader/Loader";
 const NuestrasCanciones = () => {
   const navigate = useNavigate();
   const [ourSongs, setOurSongs] = useState([]);
+  const [finalSongs, setFinalSongs] = useState([]);
   const [infoPage, setInfoPage] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -17,6 +18,23 @@ const NuestrasCanciones = () => {
       setLoading(false);
     });
   }, []);
+
+
+  useEffect(() => {
+    let newSongs = ourSongs.map((song) => {
+      let url = song.url_YOUTUBE;
+      let urlSplited = url.split("/");
+      let id = urlSplited[3].split("=");
+      let url_YOUTUBE_FINAL =
+        "https://www.youtube.com/embed/videoseries?list=" + id[1];
+      return {
+        ...song,
+        url_YOUTUBE_FINAL: url_YOUTUBE_FINAL,
+      };
+    });
+
+    setFinalSongs(newSongs);
+  }, [ourSongs]);
 
   return (
     <div className="nuestrasCanciones">
@@ -52,7 +70,7 @@ const NuestrasCanciones = () => {
         </div>
 
         <div className="destok">
-          {ourSongs.map((item) => {
+          {finalSongs.map((item) => {
             return (
               <div className="card" key={item.id}>
                 <div className="card_container">
@@ -70,13 +88,13 @@ const NuestrasCanciones = () => {
                           span{position:absolute;width:100vw;height:100%;top:0;bottom:0;margin:auto}
                           span{height:1.5em;text-align:center;font:120px/1.5 sans-serif;color:#FF4D00;text-shadow:0 0 0.5em black}
                       </style>
-                      <a href=${item.url_YOUTUBE}> 
+                      <a href=${item.url_YOUTUBE_FINAL}> 
                           <img class = "img1" src=${item.portada?.url}>
                           <img class = "img2" src="assets/playlist.png" />
                     
                       </a>
                         `}
-                        src={`${item.url_YOUTUBE}`}
+                        src={`${item.url_YOUTUBE_FINAL}`}
                         title="YouTube video player"
                         frameBorder="0"
                         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
