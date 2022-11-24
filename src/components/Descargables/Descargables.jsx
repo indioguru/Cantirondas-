@@ -21,8 +21,8 @@ const Descargables = () => {
   return (
     <div className="descargables">
       {loading && <Loader />}
-
       <div className="descargables_container">
+
         <div className="arrow">
           <img onClick={() => navigate("/")} src="assets/atras.png" alt="" />
         </div>

@@ -10,11 +10,12 @@
       padding-right: 40px;
       font-family: Conforta;
       font-weight: 100;
+      font-size: 12;
     }
 
-    @media (max-width: 750px){
-      .title h3{
-        padding-top: 70px;
+    @media (max-width: 750px) {
+      .title h3 {
+        padding-top: 90px;
       }
     }
 
@@ -23,15 +24,16 @@
       margin-top: 10px;
       font-family: Arco;
       font-weight: 100;
+      font-size: 25px;
     }
 
     @media (min-width: 1000px) {
       .title h2 {
-        font-size: 30px;
+        font-size: 35px;
       }
 
       .title h3 {
-        font-size: 25px;
+        font-size: 22px;
       }
     }
 
@@ -40,7 +42,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-top: 120px;
+        padding-top: 150px;
       }
     }
 
@@ -159,6 +161,16 @@
           right: -20px;
           opacity: 1;
           transition: opacity, top, right, 0.4s 0s ease;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 380px) {
+    &_container {
+      .contenTexts {
+        .contenTextTwo {
+          width: 340px;
         }
       }
     }

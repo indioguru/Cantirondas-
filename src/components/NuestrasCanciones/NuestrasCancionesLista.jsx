@@ -58,10 +58,10 @@ const NuestrasCancionesLista = () => {
           </div>
         </div>
 
-        <div className="contentListSongs">
+        <div className="descargablesLista_container_info">
           {ourSongs.map((item) => {
             return (
-              <div key={item.id} className="listSongs">
+              <div key={item.id} className="listDownload">
                 <h1>{item.titulo}</h1>
               </div>
             );

@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export const Logo = ({ showMenu }) => {
+  const navigate = useNavigate();
   return (
     <div className="logo">
       <div className="iconMenu">
@@ -12,7 +14,12 @@ export const Logo = ({ showMenu }) => {
           alt=""
         />
       </div>
-      <img className="img_logo" src="/assets/logo.png" alt="" />
+      <img
+        onClick={() => navigate("/")}
+        className="img_logo"
+        src="/assets/logo.png"
+        alt=""
+      />
     </div>
   );
 };
