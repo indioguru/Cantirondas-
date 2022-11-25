@@ -91,6 +91,7 @@ const HomeDescargables = () => {
                         </div>
 
                         <div className="buttonVerTodo">
+                          
                           <button onClick={() => navigate("/descargables")}>
                             VER TODOS
                           </button>
