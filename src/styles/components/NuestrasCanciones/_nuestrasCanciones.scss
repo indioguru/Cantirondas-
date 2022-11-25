@@ -6,22 +6,27 @@
       background-color: $verde-azul;
       width: 80px;
       height: 80px;
-      position: fixed;
       border-radius: 50%;
       z-index: 5;
-      right: 0;
-      bottom: 0;
+      position: fixed;
+      right: 0%;
+      bottom: 0%;
       margin: 20px;
       border: 2px white solid;
       transition: scale, 0.4s ease;
+      @media (min-width: 999px) {
+        right: 5%;
+        bottom: 4%;
+      }
       .imgButton {
         position: absolute;
         padding: 20px;
         width: 100%;
-        top: 5px;
         bottom: 0;
         right: 0;
         left: 0;
+        top: 50%;
+        transform: translate(0, -50%);
         margin: 0 auto;
         opacity: 1;
       }
@@ -30,16 +35,16 @@
         opacity: 0;
         position: absolute;
         text-align: center;
-        font-size: 20px;
+        font-size: 15px;
         margin: 0 auto;
-        top: 15px;
         font-family: Arco;
         font-weight: 100;
         color: white;
         bottom: 0;
         right: 0;
         left: 0;
-
+        top: 50%;
+        transform: translate(0, -50%);
         word-wrap: break-word;
       }
     }
@@ -59,23 +64,6 @@
         opacity: 1;
       }
     }
-
-    @media (min-width: 800px) {
-      .buttonBackIcon {
-        &_content {
-          width: 100px;
-          height: 100px;
-
-          .imgButton {
-            top: 10px;
-          }
-
-          .textButton {
-            top: 20px;
-          }
-        }
-      }
-    }
   }
 
   .arrow {
@@ -83,7 +71,7 @@
     top: 0;
     margin-top: 70px;
     margin-left: 20px;
-    z-index: 2;
+    z-index: 20;
     transition: scale, 0.4s ease;
   }
 
@@ -94,15 +82,27 @@
   }
 
   .arrow img {
-    width: 45px;
+    width: 40px;
   }
 
   @media (min-width: 800px) {
     .arrow {
-      top: 20px;
+      top: 100px;
     }
     .arrow img {
       width: 75px;
+    }
+  }
+
+  @media (min-width: 1250px) {
+    .arrow {
+      margin-left: 3%;
+    }
+  }
+
+  @media (min-width: 1300px) {
+    .arrow {
+      margin-left: 0;
     }
   }
 
@@ -115,7 +115,6 @@
 
     @media (min-width: 600px) {
       &_destok {
-        
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -127,22 +126,6 @@
         &_two {
           width: 50%;
         }
-      }
-    }
-    .logo {
-      text-align: end;
-    }
-
-    .logo img {
-      width: 240px;
-      height: 40px;
-      margin-bottom: 30px;
-    }
-
-    @media (min-width: 700px) {
-      .logo img {
-        width: 477px;
-        height: 80px;
       }
     }
 
@@ -185,7 +168,7 @@
     .title {
       text-align: center;
       color: white;
-      margin-top: 20px;
+      margin-top: 80px;
       text-transform: uppercase;
       font-family: Arco;
       font-weight: 100;
@@ -204,6 +187,7 @@
     @media (min-width: 900px) {
       .title {
         font-size: 60px;
+        margin-top: 140px;
       }
 
       .descripton {
@@ -340,7 +324,9 @@
             display: flex;
             justify-content: end;
             align-items: center;
-            margin: 0px 10px 0px 0px;
+            position: absolute;
+            bottom: 15px;
+            right: 40px;
           }
 
           .yotube {
@@ -396,18 +382,21 @@
             font-weight: 100;
             overflow: auto;
             max-height: 60px;
+            width: 85%;
+            margin: 0 auto;
+            font-size: 20px;
           }
 
           .text2 {
             color: white;
-            word-wrap: break-word;
-            padding: 10px 20px;
+            padding: 0px 30px 0px 30px;
             font-family: Conforta;
             font-weight: 100;
             overflow: auto;
-            height: 110px;
+            height: 90px;
+            margin-top: 10px;
+            font-size: 16px;
           }
-          
         }
 
         @media (min-width: 1000px) {
@@ -415,11 +404,10 @@
             width: 420px;
             height: 500px;
 
-            
-          .contentImg {
-            text-align: center;
-            padding: 30px 30px 10px 30px;
-          }
+            .contentImg {
+              text-align: center;
+              padding: 30px 30px 10px 30px;
+            }
 
             .iframe {
               width: 100%;
@@ -443,14 +431,13 @@
               width: 60px;
               height: 60px;
             }
-  
+
             .spo {
               width: 60px;
               height: 60px;
             }
           }
         }
-        
 
         .cardfront::after {
           content: "";
@@ -485,29 +472,24 @@
       &_anim {
         margin: 0 auto;
         transition: scale, 0.4s ease;
-        
       }
 
       &_anim button {
         background-color: $rojo;
         color: white;
-
+        padding: 10px 30px 15px 30px;
         border-radius: 40px;
         border: 3px white solid;
         position: relative;
         font-family: Arco;
         font-weight: 100;
         font-size: 25px;
-       
-        
       }
 
       @media (min-width: 900px) {
         &_anim button {
           font-size: 40px;
           padding: 10px 30px 15px 30px;
-       
-          
         }
       }
 

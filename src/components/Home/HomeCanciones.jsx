@@ -12,16 +12,33 @@ import Media from "react-media";
 const HomeCanciones = () => {
   const navigate = useNavigate();
   const [allSongs, setAllSongs] = useState([]);
+  const [finalSongs, setFinalSongs] = useState([]);
   const [color, setcolor] = useState(0);
 
   useEffect(() => {
     getSongs().then((data) => setAllSongs(data.data));
   }, []);
 
+  useEffect(() => {
+    let newSongs = allSongs.map((song) => {
+      let url = song.url_YOUTUBE;
+      let urlSplited = url.split("/");
+      let id = urlSplited[3].split("=");
+      let url_YOUTUBE_FINAL =
+        "https://www.youtube.com/embed/videoseries?list=" + id[1];
+      return {
+        ...song,
+        url_YOUTUBE_FINAL: url_YOUTUBE_FINAL,
+      };
+    });
+
+    setFinalSongs(newSongs);
+  }, [allSongs]);
+
   const changeBackground = () => {
     const colors = ["#8554fa", "#01b4bb", "#fa8825"];
 
-    if (color == 2) {
+    if (color === 2) {
       setcolor(0);
     } else {
       setcolor(color + 1);
@@ -61,11 +78,11 @@ const HomeCanciones = () => {
               onSlideChange={() => changeBackground()}
             >
               <div className="anim">
-                {allSongs.map((item) => {
+                {finalSongs.map((item) => {
                   return (
                     <div className="conterAll" key={item.id}>
                       {item.destacado ? (
-                        <SwiperSlide className="containerCard" key={item.id} >
+                        <SwiperSlide className="containerCard" key={item.id}>
                           <div className="contentCard">
                             <div className="card">
                               <div className="contentImg">
@@ -81,13 +98,13 @@ const HomeCanciones = () => {
                           span{position:absolute;width:100vw;height:100%;top:0;bottom:0;margin:auto}
                           span{height:1.5em;text-align:center;font:120px/1.5 sans-serif;color:#FF4D00;text-shadow:0 0 0.5em black}
                       </style>
-                      <a href=${item.url_YOUTUBE}> 
+                      <a href=${item.url_YOUTUBE_FINAL}> 
                           <img class = "img1" src=${item.portada?.url}>
                           <img class = "img2"  src="assets/playlist.png" />
                     
                       </a>
                         `}
-                                  src={`${item.url_YOUTUBE}`}
+                                  src={`${item.url_YOUTUBE_FINAL}`}
                                   title="YouTube video player"
                                   frameBorder="0"
                                   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -101,14 +118,22 @@ const HomeCanciones = () => {
 
                               <div className="contentIcons">
                                 {item.url_YOUTUBE ? (
-                                  <a href={item.url_YOUTUBE}  target={"_blank"} rel="noopener noreferrer">
+                                  <a
+                                    href={item.url_YOUTUBE}
+                                    target={"_blank"}
+                                    rel="noopener noreferrer"
+                                  >
                                     <div className="yotube"></div>
                                   </a>
                                 ) : (
                                   ""
                                 )}
                                 {item.url_SPOTIFY ? (
-                                  <a href={item.url_SPOTIFY}  target={"_blank"} rel="noopener noreferrer">
+                                  <a
+                                    href={item.url_SPOTIFY}
+                                    target={"_blank"}
+                                    rel="noopener noreferrer"
+                                  >
                                     <div className="spo"></div>
                                   </a>
                                 ) : (

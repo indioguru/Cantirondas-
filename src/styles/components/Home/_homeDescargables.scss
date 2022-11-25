@@ -221,7 +221,7 @@
 
     .card {
       margin-top: 50px;
-      margin-bottom: 250px;
+
       padding-top: 20px;
       @media (hover: hover) {
         &_container:hover {
@@ -294,23 +294,25 @@
 
           .text1 {
             color: white;
-            padding: 0px 30px;
+            padding: 0px 5px;
             font-size: 20px;
             font-family: Arco;
             font-weight: 100;
             overflow: auto;
-            height: 50px;
+            max-height: 50px;
+            width: 90%;
+            margin: 0 auto;
           }
 
           .text2 {
+            margin-top: 20px;
             color: white;
             word-wrap: break-word;
             font-family: Conforta;
             font-weight: 100;
-            padding: 0px 10px;
+            padding: 0px 20px;
             overflow: auto;
-        
-            height: 100px;
+            height: 150px;
           }
         }
 
@@ -335,7 +337,7 @@
 
             .text2 {
               font-size: 20px;
-              height: 140px;
+              margin-top: 10px;
             }
           }
         }
@@ -348,12 +350,19 @@
       }
     }
 
+    @media (min-width: 1000px) {
+      .card {
+        margin-bottom: 250px;
+      }
+    }
+
     .buttonDescargas {
       text-align: center;
       margin-top: 50px;
+      transition: scale, 0.4s ease;
     }
 
-    .buttonDescargas button {
+    .buttonDescargas a {
       color: white;
       background-color: $morado;
       border: 2px white solid;
@@ -363,16 +372,19 @@
       font-family: Arco;
       font-weight: 100;
       z-index: 2;
+      text-decoration: none;
       position: relative;
-      transition: scale, 0.4s ease;
     }
 
     @media (hover: hover) {
-      .buttonDescargas button:hover {
-        background-color: $naranja;
+      .buttonDescargas:hover {
         cursor: pointer;
         transform: scale(1.15);
         transition: scale, 0.4s ease;
+      }
+
+      .buttonDescargas a:hover {
+        background-color: $naranja;
       }
 
       .buttonVerTodo button:hover {
@@ -426,29 +438,29 @@
       &_destok {
         .destok_two {
           position: absolute;
-          top: 140px;
-          left: 500px;
+          top: 180px;
+          left: 540px;
         }
       }
     }
 
     @media (min-width: 1000px) {
       .card {
-        .buttonDescargas button {
-          font-size: 40px;
+        .buttonDescargas a {
+          font-size: 35px;
           padding: 10px 40px 15px 40px;
         }
 
         .buttonVerTodo {
-          font-size: 40px;
+          font-size: 35px;
         }
       }
 
       &_destok {
         .destok_two {
           position: absolute;
-          top: 140px;
-          left: 650px;
+          top: 190px;
+          left: 700px;
         }
       }
     }

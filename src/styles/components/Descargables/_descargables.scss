@@ -3,25 +3,30 @@
 
   .buttonBackIcon {
     &_content {
-      background-color: $morado;
+      background-color: $verde-azul;
       width: 80px;
       height: 80px;
-      position: fixed;
       border-radius: 50%;
       z-index: 5;
-      right: 0;
-      bottom: 0;
+      position: fixed;
+      right: 0%;
+      bottom: 0%;
       margin: 20px;
       border: 2px white solid;
       transition: scale, 0.4s ease;
+      @media (min-width: 999px) {
+        right: 5%;
+        bottom: 4%;
+      }
       .imgButton {
         position: absolute;
         padding: 20px;
         width: 100%;
-        top: 5px;
         bottom: 0;
         right: 0;
         left: 0;
+        top: 50%;
+        transform: translate(0, -50%);
         margin: 0 auto;
         opacity: 1;
       }
@@ -30,23 +35,23 @@
         opacity: 0;
         position: absolute;
         text-align: center;
-        font-size: 20px;
+        font-size: 15px;
         margin: 0 auto;
-        top: 15px;
         font-family: Arco;
         font-weight: 100;
         color: white;
         bottom: 0;
         right: 0;
         left: 0;
-
+        top: 50%;
+        transform: translate(0, -50%);
         word-wrap: break-word;
       }
     }
 
     @media (hover: hover) {
       &_content:hover {
-        background-color: $rojo;
+        background-color: $azul;
         transform: scale(1.15);
         transition: scale, 0.4s ease;
         cursor: pointer;
@@ -59,30 +64,14 @@
         opacity: 1;
       }
     }
-
-    @media (min-width: 800px) {
-      .buttonBackIcon {
-        &_content {
-          width: 100px;
-          height: 100px;
-
-          .imgButton {
-            top: 10px;
-          }
-
-          .textButton {
-            top: 20px;
-          }
-        }
-      }
-    }
   }
+
   .arrow {
     position: fixed;
     top: 0;
     margin-top: 70px;
     margin-left: 20px;
-    z-index: 2;
+    z-index: 20;
     transition: scale, 0.4s ease;
   }
 
@@ -93,38 +82,37 @@
   }
 
   .arrow img {
-    width: 45px;
+    width: 40px;
   }
 
   @media (min-width: 800px) {
     .arrow {
-      top: 20px;
+      top: 100px;
     }
     .arrow img {
       width: 75px;
     }
   }
 
+  @media (min-width: 1250px) {
+    .arrow {
+      margin-left: 3%;
+    }
+  }
+
+  @media (min-width: 1300px) {
+    .arrow {
+      margin-left: 0;
+    }
+  }
+
   &_container {
     padding: 20px;
     margin: 0 auto;
+    left: 0;
+    right: 0;
     max-width: 1200px;
-    &_logo {
-      text-align: end;
-    }
-
-    &_logo img {
-      width: 240px;
-      height: 40px;
-      margin-bottom: 30px;
-    }
-
-    @media (min-width: 700px) {
-      &_logo img {
-        width: 477px;
-        height: 80px;
-      }
-    }
+    position: relative;
     &_info h1 {
       color: white;
       margin-bottom: 40px;
@@ -132,22 +120,23 @@
       font-family: Arco;
       font-weight: 100;
       text-align: center;
+      padding-top: 80px;
     }
 
     &_info p {
       color: white;
-     
+
       font-family: Conforta;
       font-weight: 100;
       font-size: 15px;
       margin-bottom: 80px;
     }
 
-
     @media (min-width: 900px) {
       &_info h1 {
         text-align: center;
         font-size: 60px;
+        padding-top: 160px;
       }
 
       &_info p {
@@ -156,7 +145,6 @@
       }
     }
 
-    
     @media (min-width: 760px) {
       &_cards {
         display: flex;
@@ -330,10 +318,10 @@
 
             .buttonDescargar {
               text-align: center;
+              transition: scale, 0.4s ease;
             }
 
-           
-            .buttonDescargar button {
+            .buttonDescargar a {
               color: $rojo;
               border: none;
               background-color: unset;
@@ -341,15 +329,16 @@
               border-radius: 40px;
               font-family: Arco;
               font-weight: 100;
-              transition: scale, .4s ease;
+              text-decoration: none;
+
               font-size: 30px;
             }
 
-            @media (hover:hover){
-              .buttonDescargar button:hover{
+            @media (hover: hover) {
+              .buttonDescargar:hover {
                 transform: scale(1.15);
                 cursor: pointer;
-                transition: scale, .4s ease;
+                transition: scale, 0.4s ease;
               }
             }
 
@@ -378,24 +367,28 @@
 
             .text1 {
               color: white;
-              padding: 0px 30px;
+              padding: 0px 5px;
+              font-size: 20px;
               font-family: Arco;
               font-weight: 100;
               overflow: auto;
-              height: 60px;
+              max-height: 50px;
+              width: 90%;
+              margin: 0 auto;
             }
 
             .text2 {
+              margin-top: 20px;
               color: white;
               word-wrap: break-word;
-              padding: 0px 10px;
               font-family: Conforta;
               font-weight: 100;
+              padding: 0px 20px;
               overflow: auto;
-              height: 110px;
+              height: 100px;
             }
           }
-          @media (min-width: 1000px) {
+          @media (min-width: 999px) {
             .cardfront {
               width: 420px;
               height: 500px;
@@ -416,7 +409,7 @@
 
               .text2 {
                 font-size: 20px;
-                height: 110px;
+                margin-top: 10px;
               }
             }
           }
@@ -443,7 +436,7 @@
         font-family: Arco;
         font-weight: 100;
         font-size: 25px;
-       
+        padding: 10px 30px 15px 30px;
       }
 
       @media (min-width: 900px) {

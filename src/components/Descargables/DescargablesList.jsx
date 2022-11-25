@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Footer from "../Footer/Footer";
-import MenuMobil from "../Menu/MenuMobil";
-import { downloads, pageSongs } from "../../api/api";
+import { downloads, pageDownloads } from "../../api/api";
 import { useNavigate } from "react-router-dom";
 import Loader from "../Loader/Loader";
 
@@ -12,7 +11,7 @@ const DescargablesList = () => {
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     setLoading(true);
-    pageSongs().then((data) => {
+    pageDownloads().then((data) => {
       setInfoPage(data.data);
     });
     downloads().then((data) => {
@@ -24,33 +23,27 @@ const DescargablesList = () => {
   return (
     <div className="descargablesLista">
       {loading && <Loader />}
-      <MenuMobil />
-
-      <div className="buttonBackIcon">
-        <div
-          onClick={() => navigate("/descargables")}
-          className="buttonBackIcon_content"
-        >
-          <img className="imgButton" src="/assets/tarjetas.png" alt="" />
-          <h1 className="textButton">
-            VER <br />
-            portadas
-          </h1>
-        </div>
-      </div>
-
-      <div className="arrow">
-        <img
-          onClick={() => navigate("/descargables")}
-          src="assets/atras.png"
-          alt=""
-        />
-      </div>
       <div className="descargablesLista_container">
-        <div className="descargablesLista_container_logo">
-          <img src="assets/logo.png" alt="" />
+        <div className="buttonBackIcon">
+          <div
+            onClick={() => navigate("/descargables")}
+            className="buttonBackIcon_content"
+          >
+            <img className="imgButton" src="/assets/tarjetas.png" alt="" />
+            <h1 className="textButton">
+              VER <br />
+              portadas
+            </h1>
+          </div>
         </div>
 
+        <div className="arrow">
+          <img
+            onClick={() => navigate("/descargables")}
+            src="assets/atras.png"
+            alt=""
+          />
+        </div>
         <div className="descargablesLista_container_title">
           <h1>DESCARGABLES</h1>
         </div>

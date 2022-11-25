@@ -72,11 +72,9 @@
 
   .arrow {
     position: fixed;
-    top: 0;
-    margin-top: 70px;
-    margin-left: 20px;
-    z-index: 2;
-    transition: scale, 0.4s ease;
+    margin-left: 5%;
+    top: 60px;
+    z-index: 5;
   }
 
   .arrow:hover {
@@ -86,15 +84,27 @@
   }
 
   .arrow img {
-    width: 45px;
+    width: 40px;
   }
 
   @media (min-width: 800px) {
     .arrow {
-      top: 20px;
+      top: 100px;
     }
     .arrow img {
       width: 75px;
+    }
+  }
+
+  @media (min-width: 1250px) {
+    .arrow {
+      margin-left: 3%;
+    }
+  }
+
+  @media (min-width: 1300px) {
+    .arrow {
+      margin-left: 0;
     }
   }
 
@@ -108,29 +118,12 @@
     .title {
       text-align: center;
       color: white;
-      margin-top: 20px;
       text-transform: uppercase;
       font-family: Arco;
       font-weight: 100;
       margin-bottom: 20px;
       font-size: 35px;
-    }
-
-    .logo {
-      text-align: end;
-    }
-
-    .logo img {
-      width: 240px;
-      height: 40px;
-      margin-bottom: 30px;
-    }
-
-    @media (min-width: 700px) {
-      .logo img {
-        width: 477px;
-        height: 80px;
-      }
+      padding-top: 80px;
     }
 
     .playlist img {
@@ -144,7 +137,6 @@
       border-bottom-right-radius: 50px;
       position: relative;
       border: 3px white solid;
-
       background-color: $rojo;
       left: -20px;
       display: flex;
@@ -182,6 +174,7 @@
     @media (min-width: 900px) {
       .title {
         font-size: 60px;
+        padding-top: 140px;
       }
 
       .descripcion {
@@ -267,27 +260,6 @@
     }
 
    
-
-    .contentListSongs {
-      margin-top: 80px;
-      margin-bottom: 40px;
-      .listSongs {
-        padding: 20px 10px;
-        color: white;
-        text-transform: uppercase;
-        font-family: Conforta;
-        font-weight: 100;
-        transition: font 0.4s ease;
-      }
-
-
-
-      @media (hover: hover) {
-        .listSongs:hover {
-          font-family: Arco;
-        }
-      }
-    }
     @media (min-width: 600px) {
       &_destok {
         display: flex;
@@ -298,21 +270,6 @@
 
         &_two {
           width: 50%;
-        }
-      }
-
-      .contentListSongs {
-        display: flex;
-        flex-wrap: wrap;
-
-        .listSongs:nth-child(2n + 1) {
-          flex-basis: 50%;
-          padding-left: 100px;
-        }
-
-        .listSongs:nth-child(2n + 2) {
-          flex-basis: 50%;
-          padding-left: 100px;
         }
       }
     }

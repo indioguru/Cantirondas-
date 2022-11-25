@@ -11,10 +11,6 @@ const HomeCantemosJuntos = () => {
   return (
     <div className="home_header">
       <div className="home_header_container">
-        <div className="logo">
-          <img src="assets/logo.png" alt="" />
-        </div>
-
         <div className="home_header_container_one">
           <div className="title">
             <h3>{dataHome.texto_BIENVENIDA}</h3>

@@ -32,7 +32,6 @@ $ancho-boton: 200px;
   overflow: hidden;
 }
 
-
 ::-webkit-scrollbar {
   width: 2px;
   height: 2px;
@@ -67,6 +66,33 @@ $ancho-boton: 200px;
   background: transparent;
 }
 
+.logo {
+  position: absolute;
+  max-width: 1200px;
+  width: 90%;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  .img_logo {
+    width: 80%;
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    padding-top: 20px;
+  }
+
+  @media (hover: hover) {
+    .img_logo:hover {
+      cursor: pointer;
+    }
+  }
+
+  @media (min-width: 600px) {
+    .img_logo {
+      width: 50%;
+    }
+  }
+}
 
 @import "./components//Home/home";
 @import "./components//Menu/MenuMobile.scss";

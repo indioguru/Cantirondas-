@@ -1,11 +1,7 @@
 import RouterController from "./router/RouterController";
 
 function App() {
-  return (
-    <div>
-      <RouterController />
-    </div>
-  );
+  return <RouterController />;
 }
 
 export default App;
