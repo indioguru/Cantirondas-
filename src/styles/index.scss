@@ -19,13 +19,21 @@ $ancho-boton: 200px;
 
 @font-face {
   font-family: "Arco";
-  src: url(assets/Fuentes/arco/ARCO.ttf) format("truetype");
+  src: url("/assets/Fuentes/arco/ARCO.ttf") format("truetype"),
+    url("/assets/Fuentes/Comfortaa/static/Comfortaa-Regular.eot") format("eot"),
+    url("/assets/Fuentes/Comfortaa/static/Comfortaa-Regular.woff")
+      format("woff"),
+    url("/assets/Fuentes/Comfortaa/static/Comfortaa-Regular.woff2")
+      format("woff2");
 }
 
 @font-face {
   font-family: "Conforta";
-  src: url(assets/Fuentes/Comfortaa/static/Comfortaa-Regular.ttf)
-    format("truetype");
+  src: url("/assets/Fuentes/Comfortaa/static/Comfortaa-Regular.ttf")
+      format("truetype"),
+    url("/assets/Fuentes/arco/ARCO.eot") format("eot"),
+    url("/assets/Fuentes/arco/ARCO.woff") format("woff"),
+    url("/assets/Fuentes/arco/ARCO.woff2") format("woff2");
 }
 
 .noScroll {
@@ -93,8 +101,6 @@ $ancho-boton: 200px;
     }
   }
 }
-
-
 
 @import "./components//Home/home";
 @import "./components//Menu/MenuMobile.scss";
