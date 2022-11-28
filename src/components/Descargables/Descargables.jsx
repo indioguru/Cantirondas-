@@ -3,13 +3,14 @@ import { useNavigate } from "react-router-dom";
 import { pageDownloads, downloads } from "../../api/api";
 import Footer from "../Footer/Footer";
 import Loader from "../Loader/Loader";
+import fileDownload from "js-file-download";
+import axios from "axios";
 
 const Descargables = () => {
   const navigate = useNavigate();
   const [infoPage, setInfoPage] = useState([]);
   const [infoDownloads, setInfoDownloads] = useState([]);
   const [loading, setLoading] = useState(true);
-
 
   useEffect(() => {
     setLoading(true);
@@ -19,8 +20,18 @@ const Descargables = () => {
       setLoading(false);
     });
 
-    document.title = 'Descargables';
+    document.title = "Descargables";
   }, []);
+
+  const handleDownload = (url, filename) => {
+    axios
+      .get(url, {
+        responseType: "blob",
+      })
+      .then((res) => {
+        fileDownload(res.data, filename);
+      });
+  };
 
   return (
     <div className="descargables">
@@ -54,16 +65,12 @@ const Descargables = () => {
                 <div className="card_container">
                   <div className="cardfront">
                     <div className="contentImg">
-                      <img src={item.portada?.url} alt="" />
+                      <img src={item.portada.url} alt="" />
                     </div>
                     <h2 className="text1">{item.titulo}</h2>
                     <p className="text2"> {item.descripcion}</p>
                     <div className="buttonDescargar">
-                      <a
-                        download="logo"
-                        href={item.descargable.url}
-                        title="Imagen"
-                      >
+                      <a className="ga4-call_to_action-redes_descargar" target="_blank" href={item.descargable}>
                         DESCARGAR
                       </a>
                     </div>
@@ -76,7 +83,10 @@ const Descargables = () => {
 
         <div className="descargables_container_buttonVerLista">
           <div className="descargables_container_buttonVerLista_anim">
-            <button className="ga4-call_to_action-ver_lista" onClick={() => navigate("/descargablesLista")}>
+            <button
+              className="ga4-call_to_action-ver_lista"
+              onClick={() => navigate("/descargablesLista")}
+            >
               VER LISTA
             </button>
           </div>

@@ -19,8 +19,7 @@ const DescargablesList = () => {
       setLoading(false);
     });
 
-    document.title = 'Descargables lista';
-
+    document.title = "Descargables lista";
   }, []);
 
   return (
@@ -59,7 +58,9 @@ const DescargablesList = () => {
           {downloadsInfo.map((item) => {
             return (
               <div key={item.id} className="listDownload">
-                <h1>{item.titulo}</h1>
+                <a className="ga4-call_to_action-redes_descargar" target="_blank" href={item.descargable}>
+                  <h1>{item.titulo}</h1>
+                </a>
               </div>
             );
           })}
@@ -67,7 +68,10 @@ const DescargablesList = () => {
 
         <div className="descargablesLista_container_buttonFichas">
           <div className="descargablesLista_container_buttonFichas_anim">
-            <button className="ga4-call_to_action-ver_portadas" onClick={() => navigate("/descargables")}>
+            <button
+              className="ga4-call_to_action-ver_portadas"
+              onClick={() => navigate("/descargables")}
+            >
               VER FICHAS
             </button>
           </div>

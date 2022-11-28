@@ -22,8 +22,6 @@ const HomeDescargables = () => {
     });
   }, []);
 
-  console.log(downloadsInfo);
-
   const changeBackground = () => {
     const colors = ["#01BB77", "#0184bb", "#fa5456"];
 
@@ -81,17 +79,12 @@ const HomeDescargables = () => {
 
                       <div className="destok_two">
                         <div className="buttonDescargas">
-                          <a
-                            download="logo"
-                            href={item.descargable.url}
-                            title="Imagen"
-                          >
+                          <a className="ga4-call_to_action-redes_descargar" target="_blank" href={item.descargable}>
                             DESCARGAR
                           </a>
                         </div>
 
                         <div className="buttonVerTodo">
-                          
                           <button onClick={() => navigate("/descargables")}>
                             VER TODOS
                           </button>
