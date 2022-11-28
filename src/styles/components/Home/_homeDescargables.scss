@@ -359,9 +359,10 @@
     .buttonDescargas {
       text-align: center;
       margin-top: 50px;
+      transition: scale, 0.4s ease;
     }
 
-    .buttonDescargas button {
+    .buttonDescargas a {
       color: white;
       background-color: $morado;
       border: 2px white solid;
@@ -371,16 +372,19 @@
       font-family: Arco;
       font-weight: 100;
       z-index: 2;
+      text-decoration: none;
       position: relative;
-      transition: scale, 0.4s ease;
     }
 
     @media (hover: hover) {
-      .buttonDescargas button:hover {
-        background-color: $naranja;
+      .buttonDescargas:hover {
         cursor: pointer;
         transform: scale(1.15);
         transition: scale, 0.4s ease;
+      }
+
+      .buttonDescargas a:hover {
+        background-color: $naranja;
       }
 
       .buttonVerTodo button:hover {
@@ -442,7 +446,7 @@
 
     @media (min-width: 1000px) {
       .card {
-        .buttonDescargas button {
+        .buttonDescargas a {
           font-size: 35px;
           padding: 10px 40px 15px 40px;
         }

@@ -81,16 +81,17 @@ const HomeDescargables = () => {
 
                       <div className="destok_two">
                         <div className="buttonDescargas">
-                          <button
-                            onClick={() => 
-                              <a href={`${item.descargable.url}`} download></a>
-                            }
+                          <a
+                            download="logo"
+                            href={item.descargable.url}
+                            title="Imagen"
                           >
                             DESCARGAR
-                          </button>
+                          </a>
                         </div>
 
                         <div className="buttonVerTodo">
+                          
                           <button onClick={() => navigate("/descargables")}>
                             VER TODOS
                           </button>
