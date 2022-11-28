@@ -87,7 +87,7 @@ const HomeCanciones = () => {
                             <div className="card">
                               <div className="contentImg">
                                 <iframe
-                                  className="iframe"
+                                  className="iframe ga4-call_to_action-reproduccion"
                                   srcDoc={`
                       <style>
                           img{object-fit:cover}
@@ -122,6 +122,7 @@ const HomeCanciones = () => {
                                     href={item.url_YOUTUBE}
                                     target={"_blank"}
                                     rel="noopener noreferrer"
+                                    className="ga4-call_to_action-youtube"
                                   >
                                     <div className="yotube"></div>
                                   </a>
@@ -133,6 +134,7 @@ const HomeCanciones = () => {
                                     href={item.url_SPOTIFY}
                                     target={"_blank"}
                                     rel="noopener noreferrer"
+                                    className="ga4-call_to_action-spotify"
                                   >
                                     <div className="spo"></div>
                                   </a>

@@ -15,6 +15,9 @@ const NuestrasCancionesLista = () => {
       setInfoPage(data.data);
       setLoading(false);
     });
+
+    document.title = 'Nuestras Canciones lista';
+
   }, []);
 
   return (
@@ -70,7 +73,7 @@ const NuestrasCancionesLista = () => {
 
         <div className="buttonPortadas">
           <div className="buttonPortadas_anim">
-            <button onClick={() => navigate("/nuestrasCanciones")}>
+            <button className="ga4-call_to_action-ver_portadas" onClick={() => navigate("/nuestrasCanciones")}>
               VER PORTADAS
             </button>
           </div>

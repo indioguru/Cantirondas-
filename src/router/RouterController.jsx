@@ -1,9 +1,11 @@
 import React from "react";
 import { HashRouter, Route, Routes } from "react-router-dom";
+import { Logo } from "../components/Logo/Logo";
+import { ScrollToTop } from "./ScrollToTop";
+
 import Descargables from "../components/Descargables/Descargables";
 import DescargablesList from "../components/Descargables/DescargablesList";
 import Home from "../components/Home/Home";
-import { Logo } from "../components/Logo/Logo";
 import MenuMobil from "../components/Menu/MenuMobil";
 import NuestrasCanciones from "../components/NuestrasCanciones/NuestrasCanciones";
 import NuestrasCancionesLista from "../components/NuestrasCanciones/NuestrasCancionesLista";
@@ -20,6 +22,7 @@ const RouterController = () => {
     <HashRouter>
       <Logo showMenu={showMenu} />
       <MenuMobil showMenu={showMenu} />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/nuestrasCanciones" element={<NuestrasCanciones />} />

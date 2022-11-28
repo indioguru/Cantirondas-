@@ -18,6 +18,9 @@ const DescargablesList = () => {
       setDownloadsInfo(data.data);
       setLoading(false);
     });
+
+    document.title = 'Descargables lista';
+
   }, []);
 
   return (
@@ -64,7 +67,7 @@ const DescargablesList = () => {
 
         <div className="descargablesLista_container_buttonFichas">
           <div className="descargablesLista_container_buttonFichas_anim">
-            <button onClick={() => navigate("/descargables")}>
+            <button className="ga4-call_to_action-ver_portadas" onClick={() => navigate("/descargables")}>
               VER FICHAS
             </button>
           </div>

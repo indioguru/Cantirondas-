@@ -17,10 +17,18 @@ const Footer = ({ color }) => {
     <div className="footer">
       <div className="footer_container">
         <div className="footer_container_items">
-          <div className="footer_container_items_youtube"></div>
-          <div className="footer_container_items_spotify"></div>
-          <div className="footer_container_items_instagram"></div>
-          <div className="footer_container_items_facebook"></div>
+          <a target="_blank" href="" className="ga4-call_to_action-redes_footer">
+            <div className="footer_container_items_youtube"></div>
+          </a>
+          <a target="_blank" href="" className="ga4-call_to_action-redes_footer">
+            <div className="footer_container_items_spotify"></div>
+          </a>
+          <a target="_blank" href="" className="ga4-call_to_action-redes_footer">
+            <div className="footer_container_items_instagram"></div>
+          </a>
+          <a target="_blank" href="" className="ga4-call_to_action-redes_footer">
+            <div className="footer_container_items_facebook"></div>
+          </a>
         </div>
         <div className="footer_container_info">
           <h1 onClick={() => navigate("/nuestrasCanciones")}>

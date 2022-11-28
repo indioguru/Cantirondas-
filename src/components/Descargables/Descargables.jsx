@@ -9,6 +9,8 @@ const Descargables = () => {
   const [infoPage, setInfoPage] = useState([]);
   const [infoDownloads, setInfoDownloads] = useState([]);
   const [loading, setLoading] = useState(true);
+
+
   useEffect(() => {
     setLoading(true);
     pageDownloads().then((data) => setInfoPage(data.data));
@@ -16,6 +18,8 @@ const Descargables = () => {
       setInfoDownloads(data.data);
       setLoading(false);
     });
+
+    document.title = 'Descargables';
   }, []);
 
   return (
@@ -72,7 +76,7 @@ const Descargables = () => {
 
         <div className="descargables_container_buttonVerLista">
           <div className="descargables_container_buttonVerLista_anim">
-            <button onClick={() => navigate("/descargablesLista")}>
+            <button className="ga4-call_to_action-ver_lista" onClick={() => navigate("/descargablesLista")}>
               VER LISTA
             </button>
           </div>
