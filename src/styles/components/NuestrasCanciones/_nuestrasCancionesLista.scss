@@ -1,6 +1,10 @@
 .nuestrasCancionesLista {
   background-color: $naranja;
 
+  a{
+    text-decoration: none;
+  }
+
   .buttonBackIcon {
     &_content {
       background-color: $verde-azul;

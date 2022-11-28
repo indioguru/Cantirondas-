@@ -16,8 +16,7 @@ const NuestrasCancionesLista = () => {
       setLoading(false);
     });
 
-    document.title = 'Nuestras Canciones lista';
-
+    document.title = "Nuestras Canciones lista";
   }, []);
 
   return (
@@ -65,7 +64,9 @@ const NuestrasCancionesLista = () => {
           {ourSongs.map((item) => {
             return (
               <div key={item.id} className="listDownload">
-                <h1>{item.titulo}</h1>
+                <a target="_blank" href={item.url_YOUTUBE}>
+                  <h1>{item.titulo}</h1>
+                </a>
               </div>
             );
           })}
@@ -73,7 +74,10 @@ const NuestrasCancionesLista = () => {
 
         <div className="buttonPortadas">
           <div className="buttonPortadas_anim">
-            <button className="ga4-call_to_action-ver_portadas" onClick={() => navigate("/nuestrasCanciones")}>
+            <button
+              className="ga4-call_to_action-ver_portadas"
+              onClick={() => navigate("/nuestrasCanciones")}
+            >
               VER PORTADAS
             </button>
           </div>
