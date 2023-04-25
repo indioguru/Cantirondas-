@@ -46,7 +46,7 @@ const MenuMobil = ({ showMenu = { showMenu } }) => {
                 >
                   NUESTRAS CANCIONES
                 </h2>
-                <h2>TIENDA</h2>
+                {/* <h2>TIENDA</h2> */}
                 <h2
                   onClick={() => {
                     showMenu();

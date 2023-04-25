@@ -21,6 +21,7 @@ const Descargables = () => {
     });
 
     document.title = "Descargables";
+    document.description = "¡Desabúrrete junto a Canti Rondas! Anímate y descarga todas nuestras actividades.";
   }, []);
 
   const handleDownload = (url, filename) => {

@@ -19,6 +19,7 @@ const NuestrasCanciones = () => {
     });
 
     document.title = "Nuestras Canciones";
+    document.description = "¡Dale play y disfruta de todas nuestras canciones!";
   }, []);
 
   useEffect(() => {
@@ -142,7 +143,10 @@ const NuestrasCanciones = () => {
 
         <div className="buttonVerLista">
           <div className="buttonVerLista_anim">
-            <button className="ga4-call_to_action-ver_lista" onClick={() => navigate("/nuestrasCancionesLista")}>
+            <button
+              className="ga4-call_to_action-ver_lista"
+              onClick={() => navigate("/nuestrasCancionesLista")}
+            >
               VER LISTA
             </button>
           </div>

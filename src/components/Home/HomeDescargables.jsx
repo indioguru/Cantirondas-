@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Pagination } from "swiper";
 import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { downloads } from "../../api/api";
+import { downloads, getInfoHome } from "../../api/api";
 import "swiper/scss";
 import "swiper/scss/pagination";
 import "swiper/css/navigation";
@@ -14,12 +14,15 @@ const HomeDescargables = () => {
   const [downloadsInfo, setDownloadsInfo] = useState([]);
   const [loading, setLoading] = useState(false);
   const [color, setcolor] = useState(0);
+  const [home, setHome] = useState({});
   useEffect(() => {
     setLoading(true);
     downloads().then((data) => {
       setDownloadsInfo(data.data);
       setLoading(false);
     });
+
+    getInfoHome().then(data=> setHome(data.data))
   }, []);
 
   const changeBackground = () => {
@@ -41,10 +44,7 @@ const HomeDescargables = () => {
       <div className="home_downloads_container">
         <div className="anim2">
           <div className="textReferenceOne">
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum
-            </p>
+            <p>{home.texto_DESCARGABLE}</p>
             <img src="assets/rodadero.png" alt="" />
           </div>
         </div>
@@ -79,7 +79,11 @@ const HomeDescargables = () => {
 
                       <div className="destok_two">
                         <div className="buttonDescargas">
-                          <a className="ga4-call_to_action-redes_descargar" target="_blank" href={item.descargable}>
+                          <a
+                            className="ga4-call_to_action-redes_descargar"
+                            target="_blank"
+                            href={item.descargable}
+                          >
                             DESCARGAR
                           </a>
                         </div>
