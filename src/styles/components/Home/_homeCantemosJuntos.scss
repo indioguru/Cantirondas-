@@ -3,8 +3,6 @@
 
   &_container {
     padding: 20px;
-    margin: 0 auto;
-    max-width: 1200px;
     .title h3 {
       color: white;
       padding-right: 40px;
@@ -43,23 +41,6 @@
         justify-content: space-between;
         align-items: center;
         padding-top: 150px;
-      }
-    }
-
-    .logo {
-      text-align: end;
-      margin-bottom: 50px;
-    }
-
-    .logo img {
-      width: 240px;
-      height: 40px;
-    }
-
-    @media (min-width: 700px) {
-      .logo img {
-        width: 477px;
-        height: 80px;
       }
     }
 

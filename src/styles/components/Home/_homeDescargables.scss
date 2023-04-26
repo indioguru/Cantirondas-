@@ -6,7 +6,7 @@
     position: relative;
     z-index: 2;
     @import "/src/styles/components/StylesSwipper/swipper";
-
+    padding-bottom: 100px;
     .anim2 {
       max-width: 320px;
       height: 188px;
@@ -15,6 +15,10 @@
       margin: 0 auto;
       transition: scale, 0.4s ease;
       position: absolute;
+      @media (min-width: 900px) {
+        max-width: 505px;
+        height: 296px;
+      }
       .textReferenceOne {
         height: 100%;
         width: 100%;
@@ -25,27 +29,33 @@
         border: 2px white solid;
         top: -120px;
         position: relative;
-        margin: 0 auto;
         font-family: Arco;
         font-weight: 100;
         font-size: 15px;
-      }
 
-      @media (min-width: 900px) {
-        .textReferenceOne {
+        img {
+          width: 120px;
+          position: absolute;
+          top: -25px;
+          right: 0px;
+
+          @media (min-width: 900px) {
+            width: 180px;
+            right: -10px;
+          }
+        }
+        p {
+          padding: 40px 80px 40px 20px;
+          color: white;
+        }
+
+        @media (min-width: 900px) {
           font-size: 25px;
           top: -170px;
+          p {
+            padding: 45px 120px 70px 40px;
+          }
         }
-
-        .textReferenceOne p {
-          padding: 45px 120px 70px 40px;
-        }
-      }
-    }
-    @media (min-width: 900px) {
-      .anim2 {
-        max-width: 505px;
-        height: 296px;
       }
     }
 
@@ -56,7 +66,8 @@
       }
     }
 
-    .textReferenceOne::after {
+    .textReferenceOne::after,
+    .textReferenceOne::before {
       content: "";
       display: block;
       width: 100%;
@@ -71,16 +82,7 @@
     }
 
     .textReferenceOne::before {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 100%;
       background-color: $verde-azul;
-      position: absolute;
-      top: -10px;
-      right: 10px;
-      border-radius: 50px;
-      border: 2px white solid;
       z-index: -1;
       opacity: 0;
       transition: opacity, top, right, 0.4s 0s ease;
@@ -95,44 +97,17 @@
       }
     }
 
-    .textReferenceOne p {
-      padding: 40px 80px 40px 20px;
-      color: white;
-    }
-
-    .textReferenceOne img {
-      width: 120px;
-      position: absolute;
-      top: -25px;
-      right: 0px;
-    }
-
-    @media (min-width: 900px) {
-      .textReferenceOne img {
-        width: 180px;
-        right: -10px;
-      }
-    }
-
     .title {
-      text-align: center;
-      color: white;
-      font-family: Arco;
-      font-weight: 100;
-      font-size: 35px;
       margin-top: 150px;
       margin-bottom: 30px;
-    }
-
-    @media (min-width: 900px) {
-      .title {
-        font-size: 60px;
+      @media (min-width: 900px) {
         margin-top: 280px;
       }
     }
 
     .card:nth-child(3n + 1) {
-      .cardfront::after {
+      .cardfront::after,
+      .cardfront::before {
         background-color: $naranja;
         top: 10px;
         right: 10px;
@@ -140,8 +115,6 @@
 
       .cardfront::before {
         background-color: $morado;
-        top: 10px;
-        right: 10px;
         opacity: 0;
       }
 
@@ -221,7 +194,6 @@
 
     .card {
       margin-top: 50px;
-
       padding-top: 20px;
       @media (hover: hover) {
         &_container:hover {
@@ -235,20 +207,8 @@
         z-index: 2;
         height: 420px;
         width: 310px;
-
         transition: scale, 0.4s ease;
-
-        .cardfront::after {
-          content: "";
-          display: block;
-          width: 100%;
-          border-radius: 50px;
-          border: 3px white solid;
-          height: 100%;
-          position: absolute;
-          z-index: -1;
-        }
-
+        .cardfront::after,
         .cardfront::before {
           content: "";
           display: block;
@@ -272,24 +232,25 @@
           .contentIcons {
             text-align: end;
             margin: 10px;
+
+            img {
+              width: 50px;
+              margin: 0px 10px;
+            }
           }
 
-          .contentIcons img {
-            width: 50px;
-            margin: 0px 10px;
-          }
           .contentImg {
             text-align: center;
             padding: 20px 20px 5px 20px;
-          }
-          .contentImg img {
-            width: 100%;
-            height: 170px;
-            object-fit: cover;
-            border: 3px white solid;
-            border-top-right-radius: 40px;
-            border-bottom-right-radius: 40px;
-            border-top-left-radius: 40px;
+            img {
+              width: 100%;
+              height: 170px;
+              object-fit: cover;
+              border: 3px white solid;
+              border-top-right-radius: 40px;
+              border-bottom-right-radius: 40px;
+              border-top-left-radius: 40px;
+            }
           }
 
           .text1 {
@@ -356,62 +317,35 @@
       }
     }
 
-    .buttonDescargas {
-      text-align: center;
-      margin-top: 50px;
-      transition: scale, 0.4s ease;
-    }
-
-    .buttonDescargas a {
-      color: white;
-      background-color: $morado;
-      border: 2px white solid;
-      border-radius: 40px;
-      padding: 10px 40px 15px 40px;
-      font-size: 25px;
-      font-family: Arco;
-      font-weight: 100;
-      z-index: 2;
-      text-decoration: none;
-      position: relative;
-    }
-
-    @media (hover: hover) {
-      .buttonDescargas:hover {
-        cursor: pointer;
-        transform: scale(1.15);
-        transition: scale, 0.4s ease;
+    .button_one {
+      margin-top: 100px;
+      a,
+      button {
+        background-color: $morado;
       }
 
-      .buttonDescargas a:hover {
-        background-color: $naranja;
-      }
-
-      .buttonVerTodo button:hover {
-        transform: scale(1.15);
-        transition: scale, 0.4s ease;
-        cursor: pointer;
-        color: $naranja;
+      @media (hover: hover) {
+        a:hover {
+          background-color: $naranja;
+          cursor: pointer;
+        }
       }
     }
 
-    .buttonVerTodo {
-      text-align: center;
-    }
+    .button_two {
+      a,
+      button {
+        color: $morado;
+        margin-top: 20px;
+        margin-bottom: 200px;
+      }
 
-    .buttonVerTodo button {
-      background: unset;
-      color: $morado;
-      -webkit-text-stroke: 1px white;
-      border: none;
-      font-size: 25px;
-      margin-top: 20px;
-      font-family: Arco;
-      font-weight: 100;
-      margin-bottom: 100px;
-      position: relative;
-      z-index: 2;
-      transition: scale, 0.4s ease;
+      @media (hover: hover) {
+        button:hover {
+          color: $naranja;
+          cursor: pointer;
+        }
+      }
     }
 
     @media (min-width: 750px) {
@@ -445,17 +379,6 @@
     }
 
     @media (min-width: 1000px) {
-      .card {
-        .buttonDescargas a {
-          font-size: 35px;
-          padding: 10px 40px 15px 40px;
-        }
-
-        .buttonVerTodo {
-          font-size: 35px;
-        }
-      }
-
       &_destok {
         .destok_two {
           position: absolute;

@@ -3,6 +3,7 @@ import Footer from "../Footer/Footer";
 import HomeCanciones from "./HomeCanciones";
 import HomeCantemosJuntos from "./HomeCantemosJuntos";
 import HomeDescargables from "./HomeDescargables";
+import HomeTienda from "./HomeTienda";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
         <HomeCantemosJuntos />
         <HomeCanciones />
         <HomeDescargables />
+        <HomeTienda />
         <Footer color="#01b4bb" />
       </div>
     </div>

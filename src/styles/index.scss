@@ -17,23 +17,100 @@ $amarillo: #f5d51e;
 
 $ancho-boton: 200px;
 
+.container_all {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.title {
+  text-align: center;
+  font-family: Arco;
+  color: white;
+ 
+  font-weight: 100;
+
+  @media (min-width: 900px) {
+    font-size: 55px;
+  }
+}
+
+.button_one {
+  text-align: center;
+  button,
+  a {
+    font-size: 20px;
+    padding: 10px 50px 15px 50px;
+    font-family: Arco;
+    color: white;
+    background-color: #fa5456;
+    border-radius: 30px;
+    border: 2px white solid;
+    text-decoration: none;
+    @media (min-width: 900px) {
+      font-size: 35px;
+      padding: 10px 80px 15px 80px;
+    }
+  }
+
+  @media (hover: hover) {
+    button:hover {
+      background-color: #fa8825;
+      cursor: pointer;
+    }
+
+    a:hover {
+      background-color: #fa8825;
+      cursor: pointer;
+    }
+  }
+}
+
+.button_two {
+  text-align: center;
+  button {
+    font-size: 20px;
+    font-family: Arco;
+    color: #fa5456;
+    background-color: transparent;
+    border: none;
+    -webkit-text-stroke: 1px white;
+    transition: all 0.5s;
+    @media (min-width: 900px) {
+      font-size: 35px;
+    }
+  }
+  @media (hover: hover) {
+    button:hover {
+      color: #fa8825;
+      transform: scale(1.2);
+      transition: all 0.5s;
+      cursor: pointer;
+    }
+
+    a:hover {
+      color: #fa8825;
+      transform: scale(1.2);
+      transition: all 0.5s;
+      cursor: pointer;
+    }
+  }
+}
+
 @font-face {
   font-family: "Arco";
   src: url("/assets/Fuentes/arco/ARCO.ttf") format("truetype"),
-    url("/assets/Fuentes/Comfortaa/static/Comfortaa-Regular.eot") format("eot"),
-    url("/assets/Fuentes/Comfortaa/static/Comfortaa-Regular.woff")
-      format("woff"),
-    url("/assets/Fuentes/Comfortaa/static/Comfortaa-Regular.woff2")
-      format("woff2");
+    url("/assets/Fuentes/arco/ARCO.eot") format("eot"),
+    url("/assets/Fuentes/arco/ARCO.woff") format("woff"),
+    url("/assets/Fuentes/arco/ARCO.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "Conforta";
-  src: url("/assets/Fuentes/Comfortaa/static/Comfortaa-Regular.ttf")
-      format("truetype"),
-    url("/assets/Fuentes/arco/ARCO.eot") format("eot"),
-    url("/assets/Fuentes/arco/ARCO.woff") format("woff"),
-    url("/assets/Fuentes/arco/ARCO.woff2") format("woff2");
+  src: url("/assets/Fuentes/Comfortaa/static/Comfortaa-Regular.ttf") format("truetype"),
+    url("/assets/Fuentes/Comfortaa/static/Comfortaa-Regular.eot") format("eot"),
+    url("/assets/Fuentes/Comfortaa/static/Comfortaa-Regular.woff") format("woff"),
+    url("/assets/Fuentes/Comfortaa/static/Comfortaa-Regular.woff2") format("woff2");
 }
 
 .noScroll {

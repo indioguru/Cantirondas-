@@ -3,41 +3,24 @@
 
   &_container {
     padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
     @import "/src/styles/components/StylesSwipper/swipperCanciones";
     @media (min-width: 750px) {
       &_destok {
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
         margin-bottom: 250px;
         margin-top: 50px;
         &_two {
           width: 50%;
         }
-
         &_one {
           width: 50%;
-          .contetButtonPlaylistDestok button {
-            background-color: $rojo;
-            color: white;
-            padding: 10px 40px 15px 40px;
-            border: none;
-            border-radius: 40px;
-            border: 3px white solid;
-            font-size: 35px;
-            margin-top: 40px;
-            font-family: Arco;
-            font-weight: 100;
-            transition: scale, 0.4s ease;
-          }
-          @media (hover: hover) {
-            .contetButtonPlaylistDestok button:hover {
+          .button_one {
+            text-align: start;
+            margin-top: 20px;
+            button:hover {
               background-color: $azul;
-              transform: scale(1.15);
-              transition: scale, 0.4s ease;
-              cursor: pointer;
             }
           }
         }
@@ -50,38 +33,11 @@
       font-family: Arco;
       font-weight: 100;
       font-size: 35px;
-    }
 
-    @media (min-width: 750px) {
-      & h1 {
-        font-size: 60px;
-        text-align: start;
-      }
-    }
-
-    @media (min-width: 600px) {
-      & h1 {
+      @media (min-width: 600px) {
         font-size: 40px;
         text-align: start;
       }
-    }
-
-    .contetButtonPlaylist {
-      text-align: center;
-      margin-bottom: 50px;
-    }
-
-    .contetButtonPlaylist button {
-      background-color: $rojo;
-      color: white;
-      padding: 10px 40px 15px 40px;
-      border: none;
-      border-radius: 40px;
-      border: 2px white solid;
-      font-size: 25px;
-      margin-bottom: 150px;
-      font-family: Arco;
-      font-weight: 100;
     }
 
     .containerCard:nth-child(3n + 1) {
@@ -110,6 +66,10 @@
 
       .card {
         background-color: $rojo;
+        margin-bottom: 150px;
+        @media (min-width: 900px) {
+          margin-bottom: 0px;
+        }
       }
     }
 
@@ -136,7 +96,6 @@
           transition: opacity, top, left, 0.4s 0s ease;
         }
       }
-
       .card {
         background-color: $verde;
       }
@@ -332,6 +291,4 @@
       }
     }
   }
-
-
 }

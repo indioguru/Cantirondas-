@@ -16,8 +16,11 @@
   text-align: center;
   transition: 300ms opacity;
   transform: translate3d(0, 0, 0);
-  top: -610px;
+  top: -860px;
   z-index: 15;
+  @media (min-width: 900px) {
+    top: -750px;
+  }
 }
 
 .swiper-button-next:after,
@@ -42,12 +45,15 @@
 .swiper-button-prev:after {
   font-size: 70px;
   color: transparent;
+  @media (min-width: 900px) {
+    top: -200%;
+  }
 }
 
 @media (max-width: 750px) {
-  .swiper-pagination {
-    top: -640px;
-  }
+  //   .swiper-pagination {
+  //     top: 0px;
+  //   }
   .swiper-button-prev:after,
   .swiper-rtl .swiper-button-next:after {
     background-image: unset;

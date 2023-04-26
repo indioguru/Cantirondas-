@@ -24,8 +24,7 @@ const HomeCanciones = () => {
       let url = song.url_YOUTUBE;
       let urlSplited = url.split("/");
       let id = urlSplited[3].split("=");
-      let url_YOUTUBE_FINAL =
-        "https://www.youtube.com/embed/videoseries?list=" + id[1];
+      let url_YOUTUBE_FINAL = "https://www.youtube.com/embed/videoseries?list=" + id[1];
       return {
         ...song,
         url_YOUTUBE_FINAL: url_YOUTUBE_FINAL,
@@ -50,14 +49,14 @@ const HomeCanciones = () => {
 
   return (
     <div className="home_songs">
-      <div className="home_songs_container">
+      <div className="home_songs_container container_all">
         <div className="home_songs_container_destok">
           <div className="home_songs_container_destok_one">
             <h1>CANCIONES DESTACADAS</h1>
             <Media query="(min-width: 750px)">
               {(resolution) => {
                 return resolution ? (
-                  <div className="contetButtonPlaylistDestok">
+                  <div className="button_one">
                     <button onClick={() => navigate("/nuestrasCanciones")}>
                       VER PLAYLIST
                     </button>
@@ -159,7 +158,7 @@ const HomeCanciones = () => {
         <Media query="(max-width: 750px)">
           {(resolution) => {
             return resolution ? (
-              <div className="contetButtonPlaylist">
+              <div className="button_one">
                 <button onClick={() => navigate("/nuestrasCanciones")}>
                   VER PLAYLIST
                 </button>

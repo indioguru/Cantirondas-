@@ -1,0 +1,184 @@
+.home_tienda {
+  background-color: $morado;
+
+  &_container {
+    @import "../StylesSwipper/swipperTienda";
+
+    .button_one {
+      margin-top: 50px;
+    }
+    .button_two {
+      margin-top: 10px;
+      margin-bottom: 100px;
+    }
+    .swiper_tienda {
+      color: white;
+      @media (min-width: 900px) {
+        padding-top: 100px;
+      }
+      .display_flex {
+        padding-top: 50px;
+        @media (min-width: 900px) {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding-left: 20%;
+          gap: 5rem;
+        }
+      }
+      h1,
+      h2 {
+        font-family: Arco;
+        font-size: 20px;
+        margin-top: 30px;
+        font-weight: 100;
+        @media (min-width: 900px) {
+          font-size: 30px;
+        }
+      }
+
+      p {
+        margin-top: 30px;
+        font-size: 15px;
+        font-family: Conforta;
+        @media (min-width: 900px) {
+          font-size: 20px;
+          width: 60%;
+        }
+      }
+
+      .img {
+        width: 100%;
+        height: 400px;
+        position: relative;
+        z-index: 1;
+        transition: all 0.5s;
+        @media (min-width: 900px) {
+          width: 55%;
+          height: 400px;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 65px 65px 65px 0px;
+        }
+      }
+
+      .img::before {
+        content: "";
+        display: block;
+        width: 98%;
+        height: 96%;
+        border-radius: 65px 65px 65px 0px;
+        background-color: $naranja;
+        position: absolute;
+        border: 2px white solid;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0 auto;
+        z-index: -1;
+        transition: all 0.5s;
+      }
+
+      @media (hover: hover) {
+        .img:hover::before {
+          width: 100%;
+          height: 100%;
+          left: 10px;
+          top: 10px;
+          transition: all 0.5s;
+        }
+      }
+    }
+    .square_info {
+      max-width: 320px;
+      height: 188px;
+      width: 100%;
+      position: relative;
+      margin: 0 auto;
+      top: -110px;
+      z-index: 1;
+      transition: scale, 0.4s ease;
+      @media (min-width: 900px) {
+        top: -150px;
+        max-width: 505px;
+        height: 296px;
+      }
+
+      .square {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $naranja;
+        background-image: url("assets/texturas/3.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 50px;
+        border: 2px white solid;
+        font-family: Arco;
+        font-weight: 100;
+        color: white;
+        min-height: 200px;
+        position: relative;
+
+        p {
+          font-size: 15px;
+          padding-left: 100px;
+          @media (min-width: 900px) {
+            font-size: 25px;
+          }
+        }
+
+        .content_img {
+          width: 160px;
+          position: absolute;
+          left: 0;
+          top: -30px;
+          @media (min-width: 900px) {
+            width: 250px;
+            top: -60px;
+            left: -30px;
+          }
+          img {
+            width: 100%;
+          }
+        }
+      }
+
+      .square::after,
+      .square::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: $verde-azul;
+        position: absolute;
+        top: 10px;
+        right: -10px;
+        border-radius: 50px;
+        border: 2px white solid;
+        z-index: -1;
+        transition: all 0.5s;
+      }
+
+      .square:hover::before {
+        background-color: $rojo;
+        top: 20px;
+        right: -20px;
+        transition: all 0.5s;
+      }
+    }
+
+    @media (hover: hover) {
+      .square_info:hover {
+        transform: scale(1.15);
+        transition: scale, 0.4s ease;
+      }
+    }
+  }
+}

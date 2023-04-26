@@ -22,7 +22,7 @@ const HomeDescargables = () => {
       setLoading(false);
     });
 
-    getInfoHome().then(data=> setHome(data.data))
+    getInfoHome().then((data) => setHome(data.data));
   }, []);
 
   const changeBackground = () => {
@@ -41,7 +41,7 @@ const HomeDescargables = () => {
   return (
     <div className="home_downloads">
       {loading && <Loader />}
-      <div className="home_downloads_container">
+      <div className="home_downloads_container container_all">
         <div className="anim2">
           <div className="textReferenceOne">
             <p>{home.texto_DESCARGABLE}</p>
@@ -78,7 +78,7 @@ const HomeDescargables = () => {
                       </div>
 
                       <div className="destok_two">
-                        <div className="buttonDescargas">
+                        <div className="button_one">
                           <a
                             className="ga4-call_to_action-redes_descargar"
                             target="_blank"
@@ -88,7 +88,7 @@ const HomeDescargables = () => {
                           </a>
                         </div>
 
-                        <div className="buttonVerTodo">
+                        <div className="button_two">
                           <button onClick={() => navigate("/descargables")}>
                             VER TODOS
                           </button>
