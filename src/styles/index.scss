@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 
+@import "./base.scss";
+
 $morado: #8554fa;
 $naranja: #fa8825;
 $verde-azul: #01b4bb;
@@ -27,7 +29,7 @@ $ancho-boton: 200px;
   text-align: center;
   font-family: Arco;
   color: white;
- 
+
   font-weight: 100;
 
   @media (min-width: 900px) {
@@ -63,6 +65,14 @@ $ancho-boton: 200px;
       background-color: #fa8825;
       cursor: pointer;
     }
+  }
+}
+
+.mb {
+  padding-bottom: 170px;
+
+  @media (min-width: 750px) {
+    padding-bottom: 0px;
   }
 }
 

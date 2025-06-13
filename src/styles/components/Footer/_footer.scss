@@ -10,7 +10,7 @@
         width: 50px;
         margin: 5px;
         height: 50px;
-        background-image: url("assets/Botones/youtube.png");
+        background-image: url("/assets/Botones/botones/youtube.png");
         background-size: cover;
         transition: scale, 0.4s ease;
       }
@@ -19,7 +19,7 @@
         width: 50px;
         margin: 5px;
         height: 50px;
-        background-image: url("assets/Botones/spotify.png");
+        background-image: url("/assets/Botones/botones/spotify.png");
         background-size: cover;
         transition: scale, 0.4s ease;
       }
@@ -27,7 +27,7 @@
         width: 50px;
         margin: 5px;
         height: 50px;
-        background-image: url("assets/Botones/instagram.png");
+        background-image: url("/assets/Botones/botones/instagram.png");
         background-size: cover;
         transition: scale, 0.4s ease;
       }
@@ -35,7 +35,16 @@
         width: 50px;
         margin: 5px;
         height: 50px;
-        background-image: url("assets/Botones/facebook.png");
+        background-image: url("/assets/Botones/botones/facebook.png");
+        background-size: cover;
+        transition: scale, 0.4s ease;
+      }
+
+      &_tick {
+        width: 50px;
+        margin: 5px;
+        height: 50px;
+        background-image: url("/assets/Botones/botones/t.png");
         background-size: cover;
         transition: scale, 0.4s ease;
       }
@@ -71,26 +80,32 @@
       }
       &_items {
         &_youtube:hover {
-          background-image: url("assets/Botones/youtube_hover.png");
+          background-image: url("/assets/Botones/botones/youtube_hover.png");
           cursor: pointer;
           transform: scale(1.15);
           transition: scale, 0.4s ease;
         }
 
         &_spotify:hover {
-          background-image: url("assets/Botones/spotify_hover.png");
+          background-image: url("/assets/Botones/botones/spotify_hover.png");
           cursor: pointer;
           transform: scale(1.15);
           transition: scale, 0.4s ease;
         }
         &_instagram:hover {
-          background-image: url("assets/Botones/instagramhover.png");
+          background-image: url("/assets/Botones/botones/instagramhover.png");
           cursor: pointer;
           transform: scale(1.15);
           transition: scale, 0.4s ease;
         }
         &_facebook:hover {
-          background-image: url("assets/Botones/facebookhover.png");
+          background-image: url("/assets/Botones/botones/facebookhover.png");
+          cursor: pointer;
+          transform: scale(1.15);
+          transition: scale, 0.4s ease;
+        }
+        &_tick:hover {
+          background-image: url("/assets/Botones/botones/t_hover.png");
           cursor: pointer;
           transform: scale(1.15);
           transition: scale, 0.4s ease;
@@ -122,6 +137,11 @@
           height: 65px;
         }
         &_facebook {
+          width: 65px;
+          height: 65px;
+        }
+
+        &_tick {
           width: 65px;
           height: 65px;
         }

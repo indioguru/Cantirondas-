@@ -12,7 +12,6 @@ const MenuMobil = ({ showMenu = { showMenu } }) => {
 
   const setTime = () => {
     setIsOpenMenu(!isOpenMenu);
-  
   };
 
   return (
@@ -41,6 +40,14 @@ const MenuMobil = ({ showMenu = { showMenu } }) => {
                 <h2
                   onClick={() => {
                     showMenu();
+                    navigate("/");
+                  }}
+                >
+                  Home
+                </h2>
+                <h2
+                  onClick={() => {
+                    showMenu();
                     navigate("/nuestrasCanciones");
                   }}
                 >
@@ -56,11 +63,66 @@ const MenuMobil = ({ showMenu = { showMenu } }) => {
                   DESCARGABLES
                 </h2>
 
+                <h2
+                  onClick={() => window.open("https://tienda.cantirondas.com/", "_self")}
+                >
+                  TIENDA
+                </h2>
+
+                <h2
+                  onClick={() =>
+                    (window.location.href =
+                      "https://cantirondas.com/tucancion.cantirondas.com/")
+                  }
+                >
+                  canción de cumpleaños personalizada
+                </h2>
+
+                <h2
+                  onClick={() =>
+                    (window.location.href = "https://cantirondas.com/videopersonalizado/")
+                  }
+                >
+                  crea tu video personalizado
+                </h2>
+
                 <div className="content_info_icons">
-                  <div className="youtube"></div>
-                  <div className="spotify"></div>
-                  <div className="instagram"></div>
-                  <div className="facebook"></div>
+                  <a
+                    target="_blank"
+                    href="https://www.youtube.com/@CantiRondas"
+                    className="ga4-call_to_action-redes_footer"
+                  >
+                    <div className="youtube"></div>
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://open.spotify.com/artist/1oaOuEY1r5gNPPq1G9Y9eC?si=FTNP8YzSSlaYhhULcvqjnw
+                    "
+                    className="ga4-call_to_action-redes_footer"
+                  >
+                    <div className="spotify"></div>
+                  </a>
+
+                  <a
+                    target="_blank"
+                    href="https://www.instagram.com/canti.rondas/"
+                    className="ga4-call_to_action-redes_footer"
+                  >
+                    <div className="instagram"></div>
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://www.facebook.com/cantirondas"
+                    className="ga4-call_to_action-redes_footer"
+                  >
+                    <a
+                      target="_blank"
+                      href="https://www.facebook.com/cantirondas"
+                      className="ga4-call_to_action-redes_footer"
+                    >
+                      <div className="facebook"></div>
+                    </a>
+                  </a>
                 </div>
               </div>
 

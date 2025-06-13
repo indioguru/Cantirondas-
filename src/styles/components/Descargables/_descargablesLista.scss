@@ -1,7 +1,7 @@
 .descargablesLista {
   background-color: $verde-azul;
 
-  a{
+  a {
     text-decoration: none;
   }
 
@@ -73,43 +73,6 @@
     }
   }
 
-  .arrow {
-    position: fixed;
-    margin-left: 5%;
-    top: 60px;
-    z-index: 5;
-  }
-
-  .arrow:hover {
-    cursor: pointer;
-    transform: scale(1.15);
-    transition: scale, 0.4s ease;
-  }
-
-  .arrow img {
-    width: 40px;
-  }
-
-  @media (min-width: 800px) {
-    .arrow {
-      top: 100px;
-    }
-    .arrow img {
-      width: 75px;
-    }
-  }
-
-  @media (min-width: 1250px) {
-    .arrow {
-      margin-left: 3%;
-    }
-  }
-
-  @media (min-width: 1300px) {
-    .arrow {
-      margin-left: 0;
-    }
-  }
   &_container {
     padding: 20px;
     max-width: 1200px;

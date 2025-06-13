@@ -66,46 +66,6 @@
     }
   }
 
-  .arrow {
-    position: fixed;
-    top: 0;
-    margin-top: 70px;
-    margin-left: 20px;
-    z-index: 20;
-    transition: scale, 0.4s ease;
-  }
-
-  .arrow:hover {
-    cursor: pointer;
-    transform: scale(1.15);
-    transition: scale, 0.4s ease;
-  }
-
-  .arrow img {
-    width: 40px;
-  }
-
-  @media (min-width: 800px) {
-    .arrow {
-      top: 100px;
-    }
-    .arrow img {
-      width: 75px;
-    }
-  }
-
-  @media (min-width: 1250px) {
-    .arrow {
-      margin-left: 3%;
-    }
-  }
-
-  @media (min-width: 1300px) {
-    .arrow {
-      margin-left: 0;
-    }
-  }
-
   &_container {
     padding: 20px;
     position: relative;
@@ -330,7 +290,7 @@
           }
 
           .yotube {
-            background-image: url("assets/Botones/youtube.png");
+            background-image: url("/assets/Botones/botones/youtube.png");
             background-size: cover;
             width: 50px;
             height: 50px;
@@ -339,7 +299,7 @@
           }
 
           .spo {
-            background-image: url("assets/Botones/spotify.png");
+            background-image: url("/assets/Botones/botones/spotify.png");
             background-size: cover;
             width: 50px;
             height: 50px;
@@ -350,14 +310,14 @@
           @media (hover: hover) {
             .yotube:hover {
               cursor: pointer;
-              background-image: url("assets/Botones/youtube_hover.png");
+              background-image: url("/assets/Botones/botones/youtube_hover.png");
               transform: scale(1.15);
               transition: scale, 0.4s ease;
             }
 
             .spo:hover {
               cursor: pointer;
-              background-image: url("assets/Botones/spotify_hover.png");
+              background-image: url("/assets/Botones/botones/spotify_hover.png");
               transform: scale(1.15);
               transition: scale, 0.4s ease;
             }

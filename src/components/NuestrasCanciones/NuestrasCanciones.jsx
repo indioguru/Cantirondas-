@@ -27,8 +27,7 @@ const NuestrasCanciones = () => {
       let url = song.url_YOUTUBE;
       let urlSplited = url.split("/");
       let id = urlSplited[3].split("=");
-      let url_YOUTUBE_FINAL =
-        "https://www.youtube.com/embed/videoseries?list=" + id[1];
+      let url_YOUTUBE_FINAL = "https://www.youtube.com/embed/videoseries?list=" + id[1];
       return {
         ...song,
         url_YOUTUBE_FINAL: url_YOUTUBE_FINAL,
@@ -72,9 +71,9 @@ const NuestrasCanciones = () => {
         </div>
 
         <div className="destok">
-          {finalSongs.map((item) => {
+          {finalSongs.map((item, i) => {
             return (
-              <div className="card" key={item.id}>
+              <div className="card" key={i}>
                 <div className="card_container">
                   <div className="cardfront">
                     <div className="contentImg">

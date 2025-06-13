@@ -61,7 +61,7 @@
       }
 
       .contenTextTwo {
-        background-image: url("assets/texturas/1.png");
+        background-image: url("/assets/texturas/1.png");
         background-size: 100%;
         margin: 100px 10px 80px 0px;
         background-color: #8c5df9;
@@ -86,6 +86,30 @@
           width: 190px;
           top: -70px;
           left: 0px;
+        }
+
+        .welcomeTextTwo {
+          .link {
+            position: absolute;
+            color: white;
+            -webkit-text-stroke: 1px $rojo;
+            font-family: "arco";
+            font-size: 18px;
+            padding-left: 20px;
+            bottom: 40px;
+            transition: transform 0.5s ease;
+            @media (min-width: 1000px) {
+              font-size: 25px;
+              bottom: 60px;
+            }
+          }
+
+          @media (hover: hover) {
+            .link:hover {
+              transform: scale(1.05);
+              transition: transform 0.5s ease;
+            }
+          }
         }
 
         @media (min-width: 1000px) {

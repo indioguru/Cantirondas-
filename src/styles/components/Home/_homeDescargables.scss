@@ -22,7 +22,8 @@
       .textReferenceOne {
         height: 100%;
         width: 100%;
-        background-image: url("assets/texturas/2.png");
+        
+        background-image: url("/assets/texturas/2.png");
         background-size: 100%;
         background-color: $rojo;
         border-radius: 50px;
@@ -47,6 +48,8 @@
         p {
           padding: 40px 80px 40px 20px;
           color: white;
+          max-height: 300px;
+          overflow: auto;
         }
 
         @media (min-width: 900px) {
@@ -128,7 +131,7 @@
       }
 
       .cardfront {
-        background-image: url("assets/texturas/4.png");
+        background-image: url("/assets/texturas/4.png");
         background-size: cover;
         background-color: $verde-azul;
       }
@@ -157,7 +160,7 @@
         }
       }
       .cardfront {
-        background-image: url("assets/texturas/1.png");
+        background-image: url("/assets/texturas/1.png");
         background-size: cover;
         background-color: $morado;
       }
@@ -187,7 +190,7 @@
       }
       .cardfront {
         background-color: $naranja;
-        background-image: url("assets/texturas/3.png");
+        background-image: url("/assets/texturas/3.png");
         background-size: cover;
       }
     }
@@ -337,7 +340,7 @@
       button {
         color: $morado;
         margin-top: 20px;
-        margin-bottom: 200px;
+        margin-bottom: 0px;
       }
 
       @media (hover: hover) {

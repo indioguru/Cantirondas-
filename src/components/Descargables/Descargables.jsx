@@ -39,7 +39,7 @@ const Descargables = () => {
       {loading && <Loader />}
       <div className="descargables_container">
         <div className="arrow">
-          <img onClick={() => navigate("/")} src="assets/atras.png" alt="" />
+          <img onClick={() => navigate("/")} src="/assets/atras.png" alt="" />
         </div>
 
         <div className="descargables_container_info">
@@ -60,9 +60,9 @@ const Descargables = () => {
         </div>
 
         <div className="descargables_container_cards">
-          {infoDownloads.map((item) => {
+          {infoDownloads.map((item , i) => {
             return (
-              <div className="card" key={item.id}>
+              <div className="card" key={i}>
                 <div className="card_container">
                   <div className="cardfront">
                     <div className="contentImg">

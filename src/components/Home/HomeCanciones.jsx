@@ -48,18 +48,18 @@ const HomeCanciones = () => {
   };
 
   return (
-    <div className="home_songs">
-      <div className="home_songs_container container_all">
-        <div className="home_songs_container_destok">
-          <div className="home_songs_container_destok_one">
-            <h1>CANCIONES DESTACADAS</h1>
-            <Media query="(min-width: 750px)">
+    <div className='home_songs'>
+      <div className='home_songs_container container_all'>
+        <div className='home_songs_container_destok'>
+          <div className='home_songs_container_destok_one'>
+            <h1>
+              CANCIONES <br /> DESTACADAS
+            </h1>
+            <Media query='(min-width: 750px)'>
               {(resolution) => {
                 return resolution ? (
-                  <div className="button_one">
-                    <button onClick={() => navigate("/nuestrasCanciones")}>
-                      VER PLAYLIST
-                    </button>
+                  <div className='button_one'>
+                    <button onClick={() => navigate("/nuestrasCanciones")}>VER PLAYLIST</button>
                   </div>
                 ) : (
                   ""
@@ -68,25 +68,19 @@ const HomeCanciones = () => {
             </Media>
           </div>
 
-          <div className="home_songs_container_destok_two">
-            <Swiper
-              pagination={true}
-              navigation={true}
-              modules={[Pagination, Navigation]}
-              className="mySwiper"
-              onSlideChange={() => changeBackground()}
-            >
-              <div className="anim">
-                {finalSongs.map((item) => {
+          <div className='home_songs_container_destok_two'>
+            <Swiper pagination={true} navigation={true} modules={[Pagination, Navigation]} className='mySwiper' onSlideChange={() => changeBackground()}>
+              <div className='anim'>
+                {finalSongs.map((item, i) => {
                   return (
-                    <div className="conterAll" key={item.id}>
+                    <div className='conterAll' key={i}>
                       {item.destacado ? (
-                        <SwiperSlide className="containerCard" key={item.id}>
-                          <div className="contentCard">
-                            <div className="card">
-                              <div className="contentImg">
+                        <SwiperSlide className='containerCard' key={item.id}>
+                          <div className='contentCard'>
+                            <div className='card'>
+                              <div className='contentImg'>
                                 <iframe
-                                  className="iframe ga4-call_to_action-reproduccion"
+                                  className='iframe ga4-call_to_action-reproduccion'
                                   srcDoc={`
                       <style>
                           img{object-fit:cover}
@@ -104,38 +98,28 @@ const HomeCanciones = () => {
                       </a>
                         `}
                                   src={`${item.url_YOUTUBE_FINAL}`}
-                                  title="YouTube video player"
-                                  frameBorder="0"
-                                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                  title='YouTube video player'
+                                  frameBorder='0'
+                                  allow='accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                                   allowFullScreen
                                   muted
                                   autoPlay
                                 ></iframe>
                               </div>
-                              <h2 className="text1">{item.titulo}</h2>
-                              <p className="text2">{item.descripcion}</p>
+                              <h2 className='text1'>{item.titulo}</h2>
+                              <p className='text2'>{item.descripcion}</p>
 
-                              <div className="contentIcons">
+                              <div className='contentIcons'>
                                 {item.url_YOUTUBE ? (
-                                  <a
-                                    href={item.url_YOUTUBE}
-                                    target={"_blank"}
-                                    rel="noopener noreferrer"
-                                    className="ga4-call_to_action-youtube"
-                                  >
-                                    <div className="yotube"></div>
+                                  <a href={item.url_YOUTUBE} target={"_blank"} rel='noopener noreferrer' className='ga4-call_to_action-youtube'>
+                                    <div className='yotube'></div>
                                   </a>
                                 ) : (
                                   ""
                                 )}
                                 {item.url_SPOTIFY ? (
-                                  <a
-                                    href={item.url_SPOTIFY}
-                                    target={"_blank"}
-                                    rel="noopener noreferrer"
-                                    className="ga4-call_to_action-spotify"
-                                  >
-                                    <div className="spo"></div>
+                                  <a href={item.url_SPOTIFY} target={"_blank"} rel='noopener noreferrer' className='ga4-call_to_action-spotify'>
+                                    <div className='spo'></div>
                                   </a>
                                 ) : (
                                   ""
@@ -155,13 +139,13 @@ const HomeCanciones = () => {
           </div>
         </div>
 
-        <Media query="(max-width: 750px)">
+        <Media query='(max-width: 750px)'>
           {(resolution) => {
             return resolution ? (
-              <div className="button_one">
-                <button onClick={() => navigate("/nuestrasCanciones")}>
-                  VER PLAYLIST
-                </button>
+              <div className='button_one'>
+                <button onClick={() => navigate("/nuestrasCanciones")}>VER PLAYLIST</button>
+
+                <div className='mb'></div>
               </div>
             ) : (
               ""

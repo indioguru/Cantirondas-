@@ -61,9 +61,9 @@ const NuestrasCancionesLista = () => {
         </div>
 
         <div className="descargablesLista_container_info">
-          {ourSongs.map((item) => {
+          {ourSongs.map((item, i) => {
             return (
-              <div key={item.id} className="listDownload">
+              <div key={i} className="listDownload">
                 <a target="_blank" href={item.url_YOUTUBE}>
                   <h1>{item.titulo}</h1>
                 </a>
@@ -78,7 +78,7 @@ const NuestrasCancionesLista = () => {
               className="ga4-call_to_action-ver_portadas"
               onClick={() => navigate("/nuestrasCanciones")}
             >
-              VER PORTADAS
+              REGRESAR
             </button>
           </div>
         </div>

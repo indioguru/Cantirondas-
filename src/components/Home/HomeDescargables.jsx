@@ -59,9 +59,9 @@ const HomeDescargables = () => {
             className="mySwiper"
             onSlideChange={() => changeBackground()}
           >
-            {downloadsInfo.map((item) => {
+            {downloadsInfo.map((item, i) => {
               return (
-                <div className="conterAll" key={item.id}>
+                <div className="conterAll" key={i}>
                   {item.destacado ? (
                     <SwiperSlide className="card">
                       {item.destacado}
